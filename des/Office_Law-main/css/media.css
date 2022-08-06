@@ -1,0 +1,906 @@
+@media (max-width: 399px) {
+    .divimgLog img{
+        display: none;
+    }
+    .containerRowNames{
+        padding: 0px;
+    }
+    .divEmailSignup{
+        margin-bottom: 0px;
+    }
+    .colFirstName{
+        padding-left: 0px;
+    }
+    .rowNames{
+        width: 50%;
+     }
+     .placeholderSignup{
+        margin-right: 7%;
+        top:9px;
+
+     }
+     .lblPrivecy{
+        font-size: 10px;
+    }
+    .formSearch{
+        width: 320px;
+    }
+    .navCollapse{
+        background: rgb(30, 67, 85);
+        top: 66px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .rowPortfolio{
+        flex-direction: column-reverse;
+    }
+    .rightColProfile{
+        border-left: 0px;
+        padding-left: 15px;
+    }
+  
+       .colFacebook{
+        margin-left: 10px;
+    }
+    .hoverImgPortfolio{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .formSearch{
+        display: none;
+    }
+    .btnToggleHead{
+        display: inline-block;
+    }
+  
+    .LinkImgProfile{
+      
+        padding: 4px;
+      
+    }
+  
+    .dropdownHeadPages{
+        display: none;
+    }
+    .boxMediaHome{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .colBoxesHome,.divMyWorkHome,.divAddWorkHome{
+        width: 100% !important ;
+    }
+    .rowBoxImgsServicesHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .txtEditFiledInfoSett .colDateofBirth,.txtEditFiledInfoSett .colDateDay{
+        padding-left: 0px ;
+        padding-right: 0px;
+    }
+    .txtEditFiledInfoSett .colDateYear{
+        padding-left: 0px;
+    }
+    .flexDateExp input{
+        width: 100%;
+        margin-bottom: 15px;
+        
+      }
+      .colListMsg{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .DetailsBalance{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-left: 0px;
+        padding-right:0px ;
+    }
+    .noteDetailsBalance{
+        margin-bottom: 40px;
+    }
+    .divImgWelcomeBalance{
+        padding-left:0px;
+    }
+    .divImgWelcomeBalance svg{
+        width: 100%;
+    }
+    .NameFilePhotos::after{
+        left: 180px;
+    
+        }
+     .placeDragFilePhotos,.placeDragFile{
+        font-size: 10px !important;
+        }
+        /* .ddlistMsgHead {
+            display: none !important;
+        } */
+        .imgddlistMsgHead{
+            display: none;
+        }
+        .descTitlemsgHead{
+            max-width: 150px;
+        }
+        .ddlistMsgHead {
+            left: -39px;
+        }
+        .bodyTabPay .txtEditFiledInfoSett{
+            width: 97%;
+        }
+        .divEmail .EmailLogin,.divEmail .PassLogin,.divForget,.btnLog,.divEmail .EmailFirstSignUp,.rowNames,.containerType .row,.divPassSignup .inputPass{
+            width: 100%;
+        }
+        .countrySignUp{
+            width:100%;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .divlastNoti{
+            display: flex;
+        }
+        .txtLastNoti{
+            font-size: 16px;
+        }
+        .divlastNoti .imgNofi{
+            width: 60%;
+        }
+        .flexcontentDisableMsg div p{
+            font-size: 13px !important;
+        }
+        .pBlacMsg, .pGrayMsg{
+            width: 186px;
+        }
+        .pMsgChatDetails{
+            width: 231px;
+        }
+        .footerTabsFlex{
+            flex-direction: column;
+            align-items: end;
+        }
+        .footerTabsFlex .btnSavdAddSettings{
+            margin-left: 0px;
+            margin-bottom: 20px;
+        }
+}
+
+
+@media (min-width:400px) and (max-width: 575.98px) {
+    .divimgLog img{
+        display: none;
+    }
+    .containerRowNames{
+        padding: 0px;
+    }
+    .divEmailSignup{
+        margin-bottom: 0px;
+    }
+    .colFirstName{
+        padding-left: 0px;
+    }
+    .rowNames{
+        width: 50%;
+     }
+     .placeholderSignup{
+        margin-right: 7%;
+        top:7px;
+
+     }
+     .lblPrivecy{
+        font-size: 10px;
+    }
+    .formSearch{
+        width: 320px;
+    }
+    .navCollapse{
+        background: rgb(30, 67, 85);
+        top: 67px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .rowPortfolio{
+        flex-direction: column-reverse;
+    }
+    .rightColProfile{
+        border-left: 0px;
+        padding-left: 15px;
+    }
+   
+       .colFacebook{
+        margin-left: 10px;
+    }
+    .hoverImgPortfolio{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .formSearch{
+        display: none;
+    }
+    .btnToggleHead{
+        display: inline-block;
+    }
+    .dropdownHeadPages{
+        display: none;
+    }
+    .boxMediaHome{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .colBoxesHome,.divMyWorkHome,.divAddWorkHome{
+        width: 100% !important ;
+    }
+    .rowBoxImgsServicesHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .txtEditFiledInfoSett .colDateofBirth,.txtEditFiledInfoSett .colDateDay{
+        padding-left: 0px ;
+        padding-right: 0px;
+    }
+    .txtEditFiledInfoSett .colDateYear{
+        padding-left: 0px;
+    }
+    .flexDateExp input{
+        width: 100%;
+        margin-bottom: 15px;
+        
+      }
+      .colListMsg{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .DetailsBalance{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-left: 0px;
+        padding-right:0px ;
+    }
+    .noteDetailsBalance{
+        margin-bottom: 40px;
+    }
+    .divImgWelcomeBalance{
+        padding-left:0px;
+    }
+    .divImgWelcomeBalance svg{
+        width: 100%;
+    }
+    .NameFilePhotos::after{
+        left: 220px;
+    
+        }
+        /* .ddlistMsgHead {
+            display: none !important;
+        } */
+        .imgddlistMsgHead{
+            display: none;
+        }
+        .descTitlemsgHead{
+            width: 212px;
+        }
+        .bodyTabPay .txtEditFiledInfoSett{
+            width: 97%;
+        }
+        .divEmail .EmailLogin,.divEmail .PassLogin,.divForget,.btnLog,.divEmail .EmailFirstSignUp,.rowNames,.containerType .row,.divPassSignup .inputPass{
+            width: 70%;
+        }
+        .countrySignUp{
+            width:76%;
+        }
+        .divlastNoti{
+            display: flex;
+        }
+        .txtLastNoti{
+            font-size: 16px;
+        }
+        .divlastNoti .imgNofi{
+            width: 20%;
+        }
+        .flexcontentDisableMsg div p{
+            font-size: 13px !important;
+        }
+        .pMsgChatDetails{
+            width: 272px;
+        }
+        .footerTabsFlex{
+            flex-direction: column;
+            align-items: end;
+        }
+        .footerTabsFlex .btnSavdAddSettings{
+            margin-left: 0px;
+            margin-bottom: 20px;
+        }
+}
+
+
+ /* Small devices (landscape phones, 576px and up) */
+ @media (min-width: 576px) and (max-width: 767.98px) 
+ {
+    .divimgLog img{
+        display: none;
+    }
+    .containerRowNames{
+        padding: 0px;
+        max-width: 100%;
+    }
+    .divEmailSignup{
+        margin-bottom: 0px;
+    }
+    .colFirstName{
+        padding-left: 0px;
+    }
+    .rowNames{
+        width: 50%;
+     }
+     .placeholderSignup{
+        margin-right: 7%;
+        top:9px;
+
+     }
+     .lblPrivecy{
+        font-size: 10px;
+    }
+    .formSearch{
+        width: 320px;
+    }
+    .navCollapse{
+        background: rgb(30, 67, 85);
+        top: 68px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+    .containerCollapes{
+        max-width:663px; 
+    }
+    .rowPortfolio{
+        flex-direction: column-reverse;
+    }
+    .rightColProfile{
+        border-left: 0px;
+        padding-left: 15px;
+    }
+   
+       .colFacebook{
+        margin-left: 10px;
+    }
+    .hoverImgPortfolio{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .formSearch{
+        display: none;
+    }
+    .btnToggleHead{
+        display: inline-block;
+    }
+    .dropdownHeadPages{
+        display: none;
+    }
+    .boxMediaHome{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .colBoxesHome,.divMyWorkHome,.divAddWorkHome{
+        width: 100% !important ;
+    }
+    .rowBoxImgsServicesHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .txtEditFiledInfoSett .colDateofBirth,.txtEditFiledInfoSett .colDateDay{
+        padding-left: 0px ;
+        padding-right: 0px;
+    }
+    .txtEditFiledInfoSett .colDateYear{
+        padding-left: 0px;
+    }
+    .flexDateExp input{
+        width: 100%;
+        margin-bottom: 15px;
+        
+      }
+      .colListMsg{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .DetailsBalance{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-left: 0px;
+        padding-right:0px ;
+    }
+    .noteDetailsBalance{
+        margin-bottom: 40px;
+    }
+    .divImgWelcomeBalance{
+        padding-left:0px;
+    }
+    .divImgWelcomeBalance svg{
+        width: 100%;
+    }
+    .NameFilePhotos::after{
+        left: 257px;
+        }
+        .descTitlemsgHead{
+            width: 212px;
+        }
+        /* .ddlistMsgHead {
+            display: none !important;
+        } */
+        /* .imgddlistMsgHead{
+            display: none;
+        } */
+        /* .flexInfoClient{
+            display: flex;
+            align-items: center;
+        } */
+        .bodyTabPay .txtEditFiledInfoSett{
+            width: 97%;
+        }
+        /* .divEmail input{
+            width: 100%;
+        } */
+        .divlastNoti{
+            display: flex;
+        }
+        .txtLastNoti{
+            font-size: 16px;
+        }
+ }
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) and (max-width: 991.98px) {
+     .containerRowNames{
+         padding: 0px;
+     }
+     .divEmailSignup{
+         margin-bottom: 0px;
+     }
+     .colFirstName{
+         padding-left: 0px;
+     }
+     .rowNames{
+        width: 50%;
+     }
+     .placeholderSignup{
+        margin-right: 7%;
+        top:8px;
+     }
+     .lblPrivecy{
+        font-size: 10px;
+    }
+    .colDateofBirth{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .colDateYear{
+        padding-left: 0px;
+    }
+    .colDateDay{
+        padding-right: 0px;
+    }
+    .DateMonth{
+        border-radius: 0px;
+    }
+    .DateYear{
+        border-radius: 0rem .25rem .25rem 0rem
+    }
+    .DateDay{
+        border-radius:.25rem 0rem 0rem .25rem;
+    }
+    .formSearch{
+        width: 460px;
+    }
+    .navCollapse{
+        background: rgb(30, 67, 85);
+        top: 68px;
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        left: 0px;
+    }
+   .containerCollapes{
+        width: 100%;
+        /* padding-right: 15px; */
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 720px;
+   }
+   .footerSocialIconsApps{
+    justify-content: flex-end;
+   } 
+   /* .colFacebook{
+    margin-left: 10px;
+} */
+.hoverImgPortfolio{
+    height: 100% !important;
+    width: 100% !important;
+}
+.formSearch{
+    display: none;
+}
+.btnToggleHead{
+    display: inline-block;
+}
+.dropdownHeadPages{
+    display: none;
+}
+.boxMediaHome{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.colBoxesHome,.divMyWorkHome,.divAddWorkHome{
+    width: 100% !important ;
+}
+.colBtnProfileSetRate{
+    padding-left: 38px;
+    display: flex;
+    justify-content: end;
+}
+.colBtnsProfile{
+    display: flex;
+    justify-content: end;
+    padding-left: 63px;
+}
+.colRightOfferDetails{
+    border-left: 0.5px solid #c6c6c830;
+    padding-left: 0px;
+}
+.colLeftOfferDetails{
+    padding-right: 0px;
+}
+.flexDateExp input{
+    width: 100%;
+    margin-bottom: 15px;
+    
+  }
+  .colListMsg{
+      width: 100%;
+      margin-bottom: 20px;
+  }
+  .rowWelcomeBalance{
+    padding-bottom:68px
+}
+.DetailsBalance{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-left: 0px;
+    padding-right:0px ;
+}
+.noteDetailsBalance{
+    margin-bottom: 40px;
+}
+.divImgWelcomeBalance{
+    padding-left:0px;
+}
+.divImgWelcomeBalance svg{
+    width: 100%;
+}
+.NameFilePhotos::after{
+    left: 257px;
+
+    }
+    .colWelcomInfoBalance{
+        padding-right: 5px;
+    }
+    .ddlistMsgHead{
+        width: 429px !important; 
+    }
+    /* .flexInfoClient{
+        display: flex;
+        align-items: center;
+    } */
+    .DateYear,.DateDay,.DateMonth,.prefixPhone,.Gender,.txtPhone,.rowDateofBirth{
+        height: 42px !important;
+    }
+    .divEmail .EmailLogin,.divEmail .PassLogin,.divForget,.btnLog, .divEmail .EmailFirstSignUp,.rowNames,.containerType .row,.divPassSignup .inputPass{
+        width: 70%;
+    }
+    .countrySignUp{
+        width: 78%;
+    }
+ }
+ /* Large devices (desktops, 992px and up) */
+ @media (min-width: 992px) and (max-width: 1199.98px) {
+    .rowNames{
+        width: 52%;
+     }
+     .placeholderSignup{
+        top:9px;
+        margin-right: 11%;
+    }
+    .lblPrivecy{
+        font-size: 10px;
+    }
+    .colDateofBirth{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .colDateYear{
+        padding-left: 0px;
+    }
+    .colDateDay{
+        padding-right: 0px;
+    }
+    .DateMonth{
+        border-radius: 0px;
+    }
+    .DateYear{
+        border-radius: 0rem .25rem .25rem 0rem
+    }
+    .DateDay{
+        border-radius:.25rem 0rem 0rem .25rem;
+    }
+    .formSearch{
+        width: 460px;
+    }
+    /* .ordersLink{
+        width: 100%;
+    } */
+    .containerCollapes{
+        align-items: center;
+    }
+    .navCollapse {
+        width: 100%;
+    }
+    .colbtnSetProfile{
+        padding: 0px;
+    }
+    .colFacebook{
+        margin-left: 10px;
+    }
+    .hoverImgPortfolio{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .LinkImgProfile{
+        max-width: 100%;
+        padding-right: 0px !important;
+    }
+    .boxMediaHome{
+        flex-direction: row;
+    }
+    .txtEditFiledInfoSett .colDateDay{
+        padding-left: 0px;
+    }
+    .colBtnProfileSetRate{
+        padding-left: 38px;
+        display: flex;
+        justify-content: center;
+    }
+    .colRightOfferDetails{
+        border-left: 0.5px solid #c6c6c830;
+        padding-left: 0px;
+
+    }
+    .colLeftOfferDetails{
+        padding-right: 0px;
+    }
+    .flexDateExp input{
+        width: 100%;
+        margin-bottom: 15px;
+        
+      }
+      .containerMsg{
+        /* max-width: 1302px; */
+        padding-left: 0px;
+        margin-right: 16px !important;
+        margin-left: 16px !important;
+        }
+        .colListMsg{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .rowWelcomeBalance{
+            padding-bottom: 102px;
+        }
+        .colrangeTimeBalance{
+            padding-left: 0px;
+        }
+        .SectypeOffersHome{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        .navItemMobile{
+            display: none;
+        }
+        .NameFilePhotos::after{
+            left: 376px;
+        
+            }
+            .colWelcomInfoBalance{
+                padding-right: 5px;
+            }
+            .ddlistMsgHead{
+                width: 429px !important; 
+            }
+            .rowFormCharge{
+                flex-direction: column;
+            }
+           .rowFormCharge .col-lg-6{
+                max-width: 100% !important;  
+           }
+           .flexInfoClient{
+            display: flex;
+            align-items: center;
+        }
+        .divPersonalImg{
+            margin-right: 90px;
+        }
+        .DateYear,.DateDay,.DateMonth,.prefixPhone,.Gender,.txtPhone,.rowDateofBirth{
+            height: 42px !important;
+        }
+    }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+ @media (min-width: 1200px) {
+    .rowNames{
+        width: 52%;
+     }
+     .placeholderSignup{
+        top:9px;
+        margin-right: 11%;
+    }
+    .lblPrivecy{
+    font-size: 16px;
+    }
+    .colDateofBirth{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .colDateYear{
+        padding-left: 0px;
+    }
+    .colDateDay{
+        padding-right: 0px;
+    }
+    .DateMonth{
+        border-radius: 0px;
+    }
+    .DateYear{
+        border-radius: 0rem .25rem .25rem 0rem
+    }
+    .DateDay{
+        border-radius:.25rem 0rem 0rem .25rem;
+    }
+    .formSearch{
+        width: 460px;
+    }
+    .containerCollapes{
+        align-items: center;
+    }
+    .colFollow{
+        margin-left: 25px;
+    }
+
+    .colFacebook{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        margin-left: 18px;
+
+    }
+    .colApps{
+        padding-left: 0px !important;
+        margin-left: 5px;
+    }
+    .colbtnSetProfile{
+        padding: 0px;
+    }
+    .hoverImgPortfolio{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .LinkImgProfile{
+        padding-right: 0px !important;
+        padding-left: 27px !important;
+    }
+    .boxMediaHome{
+        flex-direction: row;
+      
+    }
+    .txtEditFiledInfoSett .colDateDay{
+        padding-left: 0px;
+    }
+    .colBtnProfileSetRate{
+        padding-left: 38px;
+        display: flex;
+        justify-content: center;
+    }
+    .btnViewProfile{
+        margin-right: 20px;
+    }
+    .colRightOfferDetails{
+        border-left: 0.5px solid #c6c6c830;
+        padding-left: 0px;
+
+    }
+    .colLeftOfferDetails{
+        padding-right: 0px;
+    }
+    .flexDateExp{
+        display: flex;
+    }
+    .flexDateExp input{
+      width: 184px;
+
+    }
+    .monthDateExp{
+      margin-left: 10px;
+    }
+    .containerMsg{
+    /* max-width: 1290px; */
+    max-width: 1302px;
+    padding-left: 0px;
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+    }
+    .colListMsg{
+        padding-left: 0px;
+    }
+    .colDetailsMsg{
+        padding-right: 0px;
+        padding-left: 0px;
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+        width: 1021px;
+    }
+    .flexColsMsg{
+        display: flex;
+    }
+    .modDialogEditName{
+        max-width: 748px;
+    }
+    .rowWelcomeBalance{
+        padding-bottom: 51px;
+    }
+    .colrangeTimeBalance{
+        padding-left: 0px;
+    }
+    .SectypeOffersHome{
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+    .navItemMobile{
+        display: none;
+    }
+    .NameFilePhotos::after{
+    left: 443px;
+
+    }
+    .colcardInfoBalance{
+        padding-left: 10px;
+    }
+    .colWelcomInfoBalance{
+        padding-right: 10px;
+    }
+    .ddlistMsgHead{
+        width: 429px !important; 
+    }
+    .flexInfoClient{
+        display: flex;
+        align-items: center;
+    }
+    .divPersonalImg{
+        margin-right: 90px;
+    }
+    .DateYear,.DateDay,.DateMonth,.prefixPhone,.Gender,.txtPhone,.rowDateofBirth{
+        height: 42px !important;
+    }
+ }

@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="img/Logo.PNG" size="16*16">
+    <title>Lawyer | offer Details</title>
+</head>
+<body>
+     <!-- aleart add to favorite -->
+     <div class="alert alert-dismissible fade show alertadd" role="alert">
+        <strong>تمت الإضافة بنجاح!</strong> لديك طلب جديد في قائمة المفضلة
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+    <!-- aleart add to favorite -->
+        <!-- Start Header -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+            <div style="display: flex; align-items: center;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo.PNG" alt="Logo">
+                </a>
+                <form class="form-inline my-2 my-lg-0 formSearch">
+                    
+                    <input class="form-control mr-sm-2 txtSearch"  placeholder="&#61442   بحث" type="search" aria-label="Search">
+                    <!-- <div class="PlaceholderSearch">
+                        <svg id="Mask" xmlns="http://www.w3.org/2000/svg" width="22" height="21.594" viewBox="0 0 22 21.594">
+                            <path id="Mask-2" data-name="Mask" d="M19.22,21.118,13.654,15.55a1.639,1.639,0,0,1-.168-.2A8.555,8.555,0,0,1,0,8.458a8.543,8.543,0,0,1,17.085,0,8.349,8.349,0,0,1-1.37,4.59,1.635,1.635,0,0,1,.242.2l5.567,5.567a1.629,1.629,0,0,1-2.3,2.3ZM1.8,8.458A6.744,6.744,0,1,0,8.542,1.78,6.718,6.718,0,0,0,1.8,8.458Z" transform="translate(0 0)" fill="#fff" style="mix-blend-mode: color-burn;isolation: isolate"/>
+                            <path id="Mask-3" data-name="Mask" d="M19.22,21.118,13.654,15.55a1.639,1.639,0,0,1-.168-.2A8.555,8.555,0,0,1,0,8.458a8.543,8.543,0,0,1,17.085,0,8.349,8.349,0,0,1-1.37,4.59,1.635,1.635,0,0,1,.242.2l5.567,5.567a1.629,1.629,0,0,1-2.3,2.3ZM1.8,8.458A6.744,6.744,0,1,0,8.542,1.78,6.718,6.718,0,0,0,1.8,8.458Z" transform="translate(0 0)" fill="#fff"/>
+                        </svg>
+                        <label>بحث</label>
+                    </div> -->
+                </form>
+            </div>
+          <div style="display: flex;">
+          
+            <div class="collapse navbar-collapse navCollapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto containerCollapes">
+                <li class="nav-item active ordersLink">
+                  <a class="nav-link" href="Orders.html">تصفح الطلبات <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Offers.html">عروضنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Portfolio.html">أعمالنا</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Advertisment.html">إعلاناتك</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="favorite.html">المفضلات</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Balance.html">الرصيد</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Settings.html">إعدادات</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Edit_Profile.html">تعديل الملف الشخصي</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="#">مساعدة</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="login.html">تسجيل الخروج</a>
+                </li>
+              </ul>
+          
+            </div>
+            <div style="display: flex; align-items: center;">
+            <div style="display: flex;  align-items: center;">
+            <div class="nav-item dropdown">
+    
+            <a class="nav-link linkNotificationHead" style="display: flex; align-items: center;" id="navbarDropdownNotifi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.546" height="27.133" viewBox="0 0 22.546 27.133">
+                        <g id="_13252117381571183079_1_" data-name="13252117381571183079 (1)" transform="translate(-4.575 -2.75)">
+                          <path id="Path_15" data-name="Path 15" d="M25.7,21.162l-.985-1.471a14.5,14.5,0,0,1-2.365-8.042,6.6,6.6,0,0,0-4.631-6.375,2.012,2.012,0,0,0-3.744,0,6.6,6.6,0,0,0-4.631,6.375,14.5,14.5,0,0,1-2.365,8.042L6,21.162a.936.936,0,0,0,.788,1.471H24.818A.993.993,0,0,0,25.7,21.162Z" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/>
+                          <path id="Path_16" data-name="Path 16" d="M19,26a3,3,0,0,1-6,0" transform="translate(-0.149 -0.367)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/>
+                        </g>
+                      </svg>
+            </a>
+            <div class="dropdown-menu ddlistMsgHead" aria-labelledby="navbarDropdownMsg">
+                <div class="flexHeadddlistMsgHead">
+                    <p class="pflexHeadddlistMsgHead">الاشعارات</p>
+                        <a href="Notifications.html">
+                          <p class="linkflexHeadddlistMsgHead">عرض الكل</p>  
+                        </a>
+                </div>
+                
+                 
+                    <div class="flexContentMsgHead">
+                        <div class="imgddlistMsgHead">
+                            <img src="img/download.jpg" alt="">
+                        </div>
+                        <div>
+                        <div class="flexNotReadMsg">
+                          <p class="pTitlemsgHead notReadMsg"><a class="addlistNoti" href="#">أمجد محمود</a> أضاف تقييم على عرض <a class="addlistNoti" href="#">دعوة قضائيةلموضوع النفقة</a></p>
+                         <div>
+                          <div class="divNotReadMsg"></div>
+                        </div>
+                        </div>
+                            <div class="divClockOfferDetails divClockddlistMsg">
+                                <i class="far fa-clock"></i>
+                                <label>منذ 3 أيام و6 ساعات</label>
+                            </div>
+                        </div>
+                    </div>
+               
+              
+                    <div class="flexContentMsgHead">
+                        <div class="imgddlistMsgHead">
+                            <img src="img/download.jpg" alt="">
+                        </div>
+                        <div>
+                        <div class="flexNotReadMsg">
+                          <p class="pTitlemsgHead notReadMsg">مبروك ،، لقد وصلت أرباحك إلى حسابك في باي بال  <a class="addlistNoti" href="#">تفاصيل المعاملات المالية</a></p>
+                         <div>
+                          <div class="divNotReadMsg"></div>
+                        </div>
+                        </div>
+                            <div class="divClockOfferDetails divClockddlistMsg">
+                                <i class="far fa-clock"></i>
+                                <label>منذ 3 أيام و6 ساعات</label>
+                            </div>
+                        </div>
+                    </div>
+                  
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                            <div class="flexNotReadMsg">
+                              <p class="pTitlemsgHead notReadMsg"><a class="addlistNoti" href="#">أمجد محمود</a> أضاف تقييم على عرض <a class="addlistNoti" href="#">دعوة قضائيةلموضوع النفقة</a></p>
+                             <div>
+                              <div class="divNotReadMsg"></div>
+                            </div>
+                            </div>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link linkMsgsHead" style="display: flex; align-items: center;" id="navbarDropdownNotifi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26.25" height="24.792" viewBox="0 0 26.25 24.792">
+                        <path id="Path_18" data-name="Path 18" d="M12.5,3h5.25a10.339,10.339,0,0,1,10.5,10.171,10.339,10.339,0,0,1-10.5,10.171v4.45C11.188,25.249,2,21.435,2,13.171A10.339,10.339,0,0,1,12.5,3Zm2.625,17.8H17.75a7.755,7.755,0,0,0,7.875-7.628A7.755,7.755,0,0,0,17.75,5.543H12.5a7.755,7.755,0,0,0-7.875,7.628c0,4.59,3.231,7.585,10.5,10.781Z" transform="translate(-2 -3)" fill="#fff"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu ddlistMsgHead" aria-labelledby="navbarDropdownMsg">
+                    <div class="flexHeadddlistMsgHead">
+                        <p class="pflexHeadddlistMsgHead">الرسائل</p>
+                            <a href="Messages.html">
+                              <p class="linkflexHeadddlistMsgHead">عرض الكل</p>  
+                            </a>
+                    </div>
+                    <a class="dropdown-item" href="Messages.html">
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="flexNotReadMsg">
+                                <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                <div class="divNotReadMsg"></div>
+                                </div>
+                                <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item" href="Messages.html">
+                            <div class="flexContentMsgHead">
+                                <div class="imgddlistMsgHead">
+                                    <img src="img/download.jpg" alt="">
+                                </div>
+                                <div>
+                                    <div class="flexNotReadMsg">
+                                    <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                    <div class="divNotReadMsg"></div>
+                                    </div>
+                                    <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                    <div class="divClockOfferDetails divClockddlistMsg">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 3 أيام و6 ساعات</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                    <a class="dropdown-item" href="Messages.html">
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="flexNotReadMsg">
+                                <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                <div class="divNotReadMsg"></div>
+                                </div>
+                                <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item" href="Messages.html">
+                            <div class="flexContentMsgHead">
+                                <div class="imgddlistMsgHead">
+                                    <img src="img/download.jpg" alt="">
+                                </div>
+                                <div>
+                                    <div class="flexNotReadMsg">
+                                    <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                    <div class="divNotReadMsg"></div>
+                                    </div>
+                                    <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                    <div class="divClockOfferDetails divClockddlistMsg">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 3 أيام و6 ساعات</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                </div>
+            </div>
+             
+              
+            </div>
+            <div style="display: flex; ">
+            <a class="nav-link LinkImgProfile"  style="display: inline-block; padding: 12px;" href="profile_Office.html">
+                <img src="img/lawyer.png" alt="">
+            </a>
+            <button class="navbar-toggler btnToggleHead" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            </div>
+            </div>
+    
+            <div class="nav-item dropdown dropdownHeadPages">
+                <a class="nav-link ddlistMoreHead" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg id="Group_88" data-name="Group 88" xmlns="http://www.w3.org/2000/svg" width="6" height="36" viewBox="0 0 8 36">
+                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="4" cy="4" r="4" fill="#fff"/>
+                        <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(0 28)" fill="#fff"/>
+                        <circle id="Ellipse_4" data-name="Ellipse 4" cx="4" cy="4" r="4" transform="translate(0 14)" fill="#fff"/>
+                      </svg>
+                  
+                </a>
+                <div class="dropdown-menu ddlistHead" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item aLinksMenuHead" href="Advertisment.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17.519" height="18" viewBox="0 0 17.519 18">
+                            <path id="campaign_3_" data-name="campaign (3)" d="M23.639.284A1.551,1.551,0,0,0,22.117.112C21.3.484,20.425.991,19.5,1.528a21.894,21.894,0,0,1-6.073,2.725H10.358a3.534,3.534,0,0,0,0,7.068H10.5a9.683,9.683,0,0,0,.754,3.52,6.8,6.8,0,0,0,2.3,2.925,1.189,1.189,0,0,0,.682.218,1.213,1.213,0,0,0,.454-.09,1.184,1.184,0,0,0,.73-.881l.247-1.244a1.193,1.193,0,0,0-.373-1.127,4.7,4.7,0,0,1-1.24-3.2,22.571,22.571,0,0,1,6.939,3.371c.348.222.708.451,1.059.67a1.2,1.2,0,0,0,.644.182,1.73,1.73,0,0,0,.945-.315,1.534,1.534,0,0,0,.708-1.294V1.575a1.534,1.534,0,0,0-.7-1.291Zm-15.69,7.5a2.412,2.412,0,0,1,2.409-2.409h2.56V10.2h-2.56A2.412,2.412,0,0,1,7.949,7.787Zm6.586,7.69a.065.065,0,0,1,.024.073l-.247,1.244a.078.078,0,0,1-.121.049,6.952,6.952,0,0,1-2.57-5.522h1.3a5.834,5.834,0,0,0,1.618,4.156Zm8.684-1.418a.406.406,0,0,1-.2.356c-.168.111-.325.147-.373.117-.347-.216-.7-.444-1.05-.664a22.758,22.758,0,0,0-7.548-3.575V5.264A24.14,24.14,0,0,0,20.058,2.5c.906-.523,1.762-1.017,2.526-1.367a.487.487,0,0,1,.432.085.406.406,0,0,1,.2.355Z" transform="translate(-6.824 0.016)" fill="#00586b"/>
+                          </svg>
+                          
+                          <label >إعلاناتك</label>
+                          
+                        </a>
+                  <a class="dropdown-item aLinksMenuHead" href="favorite.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.79" height="15.212" viewBox="0 0 16.79 15.212">
+                        <g id="heart" transform="translate(0.395 -16.746)">
+                          <g id="Group_195" data-name="Group 195" transform="translate(0 16.896)">
+                            <path id="Path_100" data-name="Path 100" d="M14.692,18.294a4.372,4.372,0,0,0-6.408,0l-.282.3-.282-.3a4.375,4.375,0,0,0-6.183-.227q-.118.109-.227.227a4.907,4.907,0,0,0,0,6.672l6.278,6.62a.572.572,0,0,0,.808.022l.022-.022,6.275-6.62A4.906,4.906,0,0,0,14.692,18.294Zm-.827,5.884h0L8,30.361,2.138,24.178a3.749,3.749,0,0,1,0-5.1A3.232,3.232,0,0,1,6.705,18.9q.1.088.184.184l.7.735a.589.589,0,0,0,.83,0l.7-.735A3.232,3.232,0,0,1,13.68,18.9q.1.088.184.184A3.715,3.715,0,0,1,13.864,24.178Z" transform="translate(0 -16.896)" fill="#00586b" stroke="#00586b" stroke-width="0.3"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <label >المفضلات</label>
+                      
+                    </a>
+                  <a class="dropdown-item aLinksMenuHead" href="Balance.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.182" height="17.253" viewBox="0 0 17.182 17.253">
+                        <g id="money_2_" data-name="money (2)" transform="translate(-0.217 0.143)">
+                          <path id="Path_1937" data-name="Path 1937" d="M17.3,4.784A.81.81,0,0,0,17,4.24L11.785.172a.819.819,0,0,0-1.146.14L5.591,6.747,2.242,8.99h0l-.925.619-.646.432-.033.024a.816.816,0,0,0-.191,1.109h0l.782,1.165.271.4,1.578,2.351h0l.262.39.789,1.175a.817.817,0,0,0,1.132.223h0l1.533-1.026.677.529a.818.818,0,0,0,1.146-.14l2.658-3.388,3.875-2.594.015-.009L16.736,9.2a.816.816,0,0,0,.224-1.132h0L16.07,6.743l1.064-1.357a.811.811,0,0,0,.168-.6Zm-14.8,6.208a2.189,2.189,0,0,1-.738,1.256l-.792-1.18L.862,10.9a.318.318,0,0,1,.062-.422l.025-.019.448-.3.9-.605a2.188,2.188,0,0,1,.205,1.441Zm2.478,5.477a.319.319,0,0,1-.441-.086l-.011-.016-.893-1.33a2.215,2.215,0,0,1,2.7.525Zm3.241-.532a.319.319,0,0,1-.447.055l-.548-.428,2.71-1.814ZM14.9,8.252A2.189,2.189,0,0,1,15.639,7l.906,1.35a.318.318,0,0,1-.088.44l-1.352.9a2.188,2.188,0,0,1-.2-1.44Zm1.841-3.173-.964,1.229-2.5-3.725a.818.818,0,0,0-1.132-.223L9.936,3.838a.249.249,0,0,0,.277.414l.436-.292a2.713,2.713,0,0,0,3.4.663L15.36,6.58a2.7,2.7,0,0,0-.671,3.39l-3.727,2.5h0L6.756,15.281a2.714,2.714,0,0,0-3.4-.662L2.047,12.663A2.684,2.684,0,0,0,3,11.088a2.682,2.682,0,0,0-.278-1.816L9.056,5.028a.249.249,0,0,0-.277-.414L6.926,5.854,11.031.62a.319.319,0,0,1,.447-.055l5.21,4.068a.317.317,0,0,1,.054.446Zm-4.319-2.3a.319.319,0,0,1,.442.086l.457.681.447.666a2.215,2.215,0,0,1-2.7-.525Z" transform="translate(0)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1938" data-name="Path 1938" d="M155.706,191.556a3.272,3.272,0,0,0,1.2,5.93A.25.25,0,0,0,157,197a2.769,2.769,0,1,1,1.293-.054.249.249,0,0,0,.137.48,3.274,3.274,0,1,0-2.723-5.866Z" transform="translate(-148.827 -184.653)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1939" data-name="Path 1939" d="M359.781,183.079a.248.248,0,0,0,.138-.042l1.174-.786a.249.249,0,0,0-.277-.414l-1.174.786a.249.249,0,0,0,.139.457Z" transform="translate(-347.28 -175.751)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1940" data-name="Path 1940" d="M97.077,358.411,95.9,359.2a.249.249,0,1,0,.277.414l1.174-.786a.249.249,0,0,0-.277-.414Z" transform="translate(-92.309 -346.456)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1941" data-name="Path 1941" d="M209.186,233.8a.249.249,0,0,0,.414-.278l-.134-.2a1.127,1.127,0,0,0,.208-1.246c-.27-.6-.825-.648-1.389-.515l-.566-.843a.657.657,0,0,1,.264-.033.249.249,0,0,0,.074-.493,1.192,1.192,0,0,0-.622.1l-.11-.163a.249.249,0,0,0-.414.278l.12.178a.968.968,0,0,0-.184,1.038c.22.515.714.576,1.21.492l.728,1.085a.9.9,0,0,1-.478.105.25.25,0,0,0,.006.5,1.378,1.378,0,0,0,.751-.189Zm-1.619-2.144a.343.343,0,0,1-.262-.227.458.458,0,0,1,.016-.407l.424.632A1.245,1.245,0,0,1,207.567,231.654ZM208.6,232a.5.5,0,0,1,.621.284.639.639,0,0,1-.044.607l-.6-.887Z" transform="translate(-199.597 -222.375)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                        </g>
+                      </svg>  
+                      <label >الرصيد</label>                
+                    
+                </a>
+                  <a class="dropdown-item aLinksMenuHead" href="Settings.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.508" viewBox="0 0 16 16.508">
+                        <path id="setting_2_" data-name="setting (2)" d="M23.4,9.566,22.715,9a.967.967,0,0,1,0-1.493l.687-.565A1.286,1.286,0,0,0,23.7,5.3L22.343,2.953a1.286,1.286,0,0,0-1.569-.563l-.833.312a.967.967,0,0,1-1.293-.747L18.5,1.078A1.286,1.286,0,0,0,17.229,0H14.517a1.286,1.286,0,0,0-1.272,1.078l-.146.877a.967.967,0,0,1-1.293.747l-.833-.312A1.286,1.286,0,0,0,9.4,2.953L8.047,5.3a1.286,1.286,0,0,0,.3,1.641l.687.565A.967.967,0,0,1,9.031,9l-.687.565a1.286,1.286,0,0,0-.3,1.641L9.4,13.555a1.286,1.286,0,0,0,1.569.563l.833-.312a.967.967,0,0,1,1.293.747l.146.877a1.286,1.286,0,0,0,1.272,1.078h2.712A1.286,1.286,0,0,0,18.5,15.43l.146-.877a.967.967,0,0,1,1.293-.747l.833.312a1.286,1.286,0,0,0,1.569-.563L23.7,11.206a1.286,1.286,0,0,0-.3-1.64ZM21.226,12.91l-.833-.312a2.257,2.257,0,0,0-3.018,1.742l-.146.877H14.517l-.146-.877A2.257,2.257,0,0,0,11.353,12.6l-.833.312L9.164,10.562,9.851,10a2.257,2.257,0,0,0,0-3.485l-.687-.565L10.52,3.6l.833.312a2.257,2.257,0,0,0,3.018-1.742l.146-.877h2.712l.146.877A2.257,2.257,0,0,0,20.393,3.91l.833-.312,1.356,2.348h0l-.687.565A2.257,2.257,0,0,0,21.9,10l.687.565ZM15.873,5.073a3.181,3.181,0,1,0,3.181,3.181A3.185,3.185,0,0,0,15.873,5.073Zm0,5.073a1.892,1.892,0,1,1,1.892-1.892A1.894,1.894,0,0,1,15.873,10.145Z" transform="translate(-7.873 0)" fill="#00586b"/>
+                      </svg>                  
+                      <label>إعدادات</label>
+                    </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item aLinksMenuHead" href="Edit_Profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.999" viewBox="0 0 16 15.999">
+                        <g id="edit_2_" data-name="edit (2)" transform="translate(0 -0.501)">
+                          <path id="Path_1942" data-name="Path 1942" d="M12.667,91.149a.666.666,0,0,0-.667.667v5.333a.667.667,0,0,1-.667.667H2a.667.667,0,0,1-.667-.667V87.816A.667.667,0,0,1,2,87.149H7.333a.667.667,0,0,0,0-1.333H2a2,2,0,0,0-2,2v9.333a2,2,0,0,0,2,2h9.333a2,2,0,0,0,2-2V91.816a.666.666,0,0,0-.667-.667Zm0,0" transform="translate(0 -82.649)" fill="#00586b"/>
+                          <path id="Path_1943" data-name="Path 1943" d="M182.378,73.537a.337.337,0,0,0-.091.17l-.471,2.357a.333.333,0,0,0,.327.4.317.317,0,0,0,.065-.007l2.357-.471a.332.332,0,0,0,.171-.091l5.275-5.275-2.357-2.357Zm0,0" transform="translate(-176.127 -65.643)" fill="#00586b"/>
+                          <path id="Path_1944" data-name="Path 1944" d="M394.725.989a1.668,1.668,0,0,0-2.357,0l-.923.923L393.8,4.268l.923-.923a1.666,1.666,0,0,0,0-2.357Zm0,0" transform="translate(-379.213 0)" fill="#00586b"/>
+                        </g>
+                      </svg>               
+                      <label>تعديل الملف الشخصي</label>   
+                </a>
+                  <a class="dropdown-item aLinksMenuHead" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.38" height="16.38" viewBox="0 0 16.38 16.38">
+                        <g id="help" transform="translate(0.191 0.19)">
+                          <path id="Path_1945" data-name="Path 1945" d="M13.656,2.343A8,8,0,0,0,2.343,13.657,8,8,0,0,0,13.656,2.343Zm-.331,10.982A7.531,7.531,0,0,1,2.674,2.675,7.531,7.531,0,0,1,13.325,13.325Zm0,0" transform="translate(0)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1946" data-name="Path 1946" d="M61.487,265.907a.235.235,0,0,0-.254.213,6.032,6.032,0,0,1-12.017,0,.234.234,0,0,0-.467.04,6.5,6.5,0,0,0,12.952,0,.234.234,0,0,0-.213-.254Zm0,0" transform="translate(-47.225 -257.597)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1947" data-name="Path 1947" d="M48.978,54.183a.234.234,0,0,0,.254-.213,6.032,6.032,0,0,1,12.017.005.234.234,0,0,0,.233.214h.02a.234.234,0,0,0,.213-.254,6.5,6.5,0,0,0-12.951-.006.234.234,0,0,0,.213.254Zm0,0" transform="translate(-47.241 -46.501)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1948" data-name="Path 1948" d="M215.558,338.027a1.046,1.046,0,0,0,0,2.091,1.046,1.046,0,1,0,0-2.091Zm0,1.623a.572.572,0,0,1-.565-.577.579.579,0,0,1,.565-.577.577.577,0,1,1,0,1.154Zm0,0" transform="translate(-207.821 -327.464)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1949" data-name="Path 1949" d="M177.683,111.822l.012-.01c.037-.034.082-.074.135-.121a3.3,3.3,0,0,0,1.348-2.389c0-1.325-1.107-2.251-2.692-2.251a2.871,2.871,0,0,0-1.781.537,1.476,1.476,0,0,0-.649,1.105.8.8,0,0,0,.831.807.785.785,0,0,0,.641-.387.963.963,0,0,1,.922-.436c.3,0,.995.077.995.792,0,.539-.409.876-.8,1.2-.1.085-.2.166-.29.249a2.48,2.48,0,0,0-.792,2.058c0,.42.089.9.783.9.75,0,.831-.464.831-.664,0-.695.02-.993.51-1.393Zm-.3-.358a1.871,1.871,0,0,0-.677,1.752c0,.078,0,.2-.362.2-.193,0-.231-.045-.244-.06a.612.612,0,0,1-.071-.374,2.029,2.029,0,0,1,.638-1.71l0,0c.077-.073.17-.149.268-.23a2.077,2.077,0,0,0,.975-1.563c0-.766-.574-1.26-1.463-1.26a1.425,1.425,0,0,0-1.291.615c-.13.166-.174.208-.272.208a.344.344,0,0,1-.362-.338c0-.4.592-1.173,1.961-1.173,1.33,0,2.223.716,2.223,1.782a2.857,2.857,0,0,1-1.189,2.038C177.466,111.386,177.42,111.426,177.38,111.463Zm0,0" transform="translate(-168.616 -103.706)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                        </g>
+                      </svg>    
+                      <label>مساعدة</label>                
+                    
+                </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item aLinksMenuHead" href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                        <g id="log-out" transform="translate(-126.235 -159.242)">
+                          <path id="Path_1950" data-name="Path 1950" d="M127.635,169.042v1.4a2.8,2.8,0,0,0,2.8,2.8h7a2.8,2.8,0,0,0,2.8-2.8v-8.4a2.8,2.8,0,0,0-2.8-2.8h-7a2.8,2.8,0,0,0-2.8,2.8v1.4a.7.7,0,0,0,1.4,0v-1.4a1.4,1.4,0,0,1,1.4-1.4h7a1.4,1.4,0,0,1,1.4,1.4v8.4a1.4,1.4,0,0,1-1.4,1.4h-7a1.4,1.4,0,0,1-1.4-1.4v-1.4a.7.7,0,0,0-1.4,0Zm5.31-3.5-.905-.9a.7.7,0,0,1,.99-.99l2.1,2.1a.7.7,0,0,1,0,.99l-2.1,2.1a.7.7,0,0,1-.99-.99l.905-.905h-6.01a.7.7,0,1,1,0-1.4Z" fill="#00586b" fill-rule="evenodd"/>
+                        </g>
+                      </svg>
+                        <label>تسجيل الخروج</label>
+                </a>
+                </div>
+            </div> 
+        </div>
+        </div>
+        </nav>
+        <!-- End Header -->
+    <!-- start content -->
+    <div class="container">
+        <div class="pagesLinks">
+            <a href="index.html">الرئيسية/</a>
+            <a href="Offers.html">العروض/</a>
+            <a href="OfferChat.html">قانوني،شرعي</a>
+        </div>
+        <h3 class="hTitle">تفاصيل العرض</h3>
+        
+            <div class="contentOfferDetails">
+                <div class="row">
+                    <div class="col-lg-8 col-md-7 col-12 colRightOfferDetails">
+                        <div class="divpTitleOfferDetails">
+                            <p class="pTitleOfferDetails pTitleOfferComplete">محامي شرعي للمرافعه في جميع الدعاوي الشرعيه</p>
+                            <div class="backcompleteProject pbackcompleteProject">
+                                <p>مكتمل</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="TitleCompleteRate">تقييم العرض</p>
+                            </div>
+                            <div class="divRates">
+                                <p>الخبرة في مجال القانون </p>
+                                <div class="divStarts divStartsProfile">
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div> 
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <p class="pStarts">5.00</p>
+                                </div>
+                            </div>
+                            <div class="divRates">
+                                <p>جودة العمل المسلّم  </p>
+                                <div class="divStarts divStartsProfile">
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div> 
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <p class="pStarts">5.00</p>
+                                </div>
+                            </div>
+                            <div class="divRates">
+                                <p>الإلتزام بالعمل </p>
+                                <div class="divStarts divStartsProfile">
+                                  
+                                    <div> 
+                                        <i class="fas fa-star star"></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star "></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star "></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star "></i>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-star star "></i>
+                                    </div>
+                                    <p class="pStarts">5.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="InfoClientComplete">
+                            <div class="flexInfoClient">
+                                <div class="imgProfile imgClientComplete">
+                                    <img src="img/lawyer.png" alt="">
+                                </div>
+                                <div class="divNameClient">
+                                    <div>
+                                        <a href="Entrepreneur.html">
+                                        <p class="NameClient">علي</p>
+                                        </a>
+                                    </div>
+                                    <div class="divIconClient">
+                                        <div class="divClockRate divClockRateClient">
+                                            <i class="fas fa-user"></i>
+                                            <label>صاحب المشروع</label>
+                                        </div>
+                                        <div class="divClockRate">
+                                            <i class="far fa-clock"></i>
+                                            <label>منذ 3 شهور</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="pFeedbackClient pFeedbackClientComplete">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة هذا النص هو مثال لنص يمكن أن يستبدل في المساحة هذا النص هو مثال لنص يمكن أن يستبدل في المساحة  </p>
+                            </div>
+                        </div>
+                        <div class="divDescOfferDetails">
+                            <p class="pTypeOfferDetails">
+                                قانوني نظامي _ حضور جلسة
+                            </p>
+                            <p class="pTimeOfferDetails">
+                                نشر منذ 5 دقائق
+                            </p>
+                            <p class="pDescOfferDetails"> هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.<br>
+                                إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                                ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                            </p>
+                        </div>
+                        <div class="divSkillsOfferDetails">
+                            <p class="pSkillsOfferDetails">المهارات والخبرات</p>
+                            <div class="rowSkillsOfferDetails">
+                                <div >
+                                    <button class="backSkills">
+                                        <p>تحليل</p>
+                                    </button>
+                                </div>
+                                <div >
+                                    <button class="backSkills">
+                                        <p>بحث قانوني</p>
+                                    </button>
+                                </div>
+                                <div >
+                                    <button class="backSkills">
+                                        <p>قانون موضعي</p>
+                                    </button>
+                                </div>
+                                <div >
+                                    <button class="backSkills">
+                                        <p>التواصل الشفهي</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divFilesOfferDetails">
+                            <p class="pFilesOfferDetails">ملفات مرفقة</p>
+                            <div class="divlblFilesOfferDetials">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.802" height="18" viewBox="0 0 16.802 18">
+                                    <g id="_x38_2_attachment" transform="translate(-2.001 -1)">
+                                    <path id="Path_1875" data-name="Path 1875" d="M18.8,5.8A4.769,4.769,0,0,1,17.4,9.2l-8.647,8.75a3.6,3.6,0,1,1-5.095-5.089L9.9,6.644a2.361,2.361,0,0,1,3.324-.068,2.232,2.232,0,0,1,.649,1.663A2.443,2.443,0,0,1,13.153,9.9L7.225,15.826a.6.6,0,1,1-.849-.849L12.3,9.049a1.244,1.244,0,0,0,.371-.845,1.044,1.044,0,0,0-.3-.78,1.16,1.16,0,0,0-1.629.07L4.5,13.705A2.4,2.4,0,0,0,7.9,17.1l8.647-8.75a3.6,3.6,0,1,0-5.089-5.094L3.023,11.627a.6.6,0,0,1-.846-.852L10.609,2.4A4.8,4.8,0,0,1,18.8,5.8Z" fill="#8e8e93"/>
+                                    </g>
+                                </svg>
+                                <a href="#">
+                                <label class="lblFilesOfferDetails">هذا النص هو مثال لنص </label>  
+                                </a>
+                            </div>
+                            <div class="divlblFilesOfferDetials">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16.802" height="18" viewBox="0 0 16.802 18">
+                                    <g id="_x38_2_attachment" transform="translate(-2.001 -1)">
+                                    <path id="Path_1875" data-name="Path 1875" d="M18.8,5.8A4.769,4.769,0,0,1,17.4,9.2l-8.647,8.75a3.6,3.6,0,1,1-5.095-5.089L9.9,6.644a2.361,2.361,0,0,1,3.324-.068,2.232,2.232,0,0,1,.649,1.663A2.443,2.443,0,0,1,13.153,9.9L7.225,15.826a.6.6,0,1,1-.849-.849L12.3,9.049a1.244,1.244,0,0,0,.371-.845,1.044,1.044,0,0,0-.3-.78,1.16,1.16,0,0,0-1.629.07L4.5,13.705A2.4,2.4,0,0,0,7.9,17.1l8.647-8.75a3.6,3.6,0,1,0-5.089-5.094L3.023,11.627a.6.6,0,0,1-.846-.852L10.609,2.4A4.8,4.8,0,0,1,18.8,5.8Z" fill="#8e8e93"/>
+                                    </g>
+                                </svg>
+                                <a href="#">
+                                <label class="lblFilesOfferDetails">هذا النص هو مثال لنص </label>  
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-12 colLeftOfferDetails">
+                        <div class="divBtnsOfferDetails">
+                        
+                            <button class="btnsOfferDetails btnsOfferDetailsSave">حفظ العرض
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15.464" height="14.07" viewBox="0 0 15.464 14.07">
+                                    <g id="heart" transform="translate(0.732 0.5)">
+                                    <g id="Group_195" data-name="Group 195">
+                                        <path id="Path_100" data-name="Path 100" d="M12.855,18.119a3.825,3.825,0,0,0-5.607,0L7,18.38l-.247-.261a3.828,3.828,0,0,0-5.41-.2q-.1.1-.2.2a4.293,4.293,0,0,0,0,5.838l5.493,5.793a.5.5,0,0,0,.707.019l.019-.019,5.491-5.793A4.293,4.293,0,0,0,12.855,18.119Zm-.724,5.149h0L7,28.678l-5.13-5.41a3.281,3.281,0,0,1,0-4.461,2.828,2.828,0,0,1,4-.161q.084.077.161.161l.61.643a.515.515,0,0,0,.727,0l.61-.643a2.828,2.828,0,0,1,4-.161q.084.077.161.161A3.251,3.251,0,0,1,12.131,23.268Z" transform="translate(0 -16.896)" fill="#468995" stroke="#468995" stroke-width="1"/>
+                                    </g>
+                                    </g>
+                                </svg>                              
+                            </button>
+                        </div>
+                        <div class="divInfoOfferDetails">
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <label class="boldLblInfoDetails">حالة العرض:</label>
+                                    </div>
+                                    <div class="col-6">
+                                    <label class="lblInfoDetails lblCompleteOffer">مكتمل</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <label class="boldLblInfoDetails">الميزانية:</label>
+                                    </div>
+                                    <div class="col-6">
+                                    <label class="lblInfoDetails">150-560 ريال سعودي</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <label class="boldLblInfoDetails">مدة التنفيذ:</label>
+                                    </div>
+                                    <div class="col-6">
+                                    <label class="lblInfoDetails">20 أيام</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                    <label class="boldLblInfoDetails">بدأ تنفيذه منذ:</label>
+                                    </div>
+                                    <div class="col-6">
+                                    <label class="lblInfoDetails">13 يوم و 3 ساعات</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="boldLblInfoDetails">تاريخ الصفقة:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="lblInfoDetails">16/12/2021</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="divlblInfoOfferDetails">
+                                <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="boldLblInfoDetails">موعد التسليم:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="lblInfoDetails">23/12/2021</label>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divInfoLawyerOfferDetails">
+                            <p class="pTitledivInfoOffers">صاحب المشروع</p>
+                            <div class="flexInfoClient">
+                                <div class="imgProfileOffer imgProfileClientOffer">
+                                    <img src="img/download.jpg" alt="">
+                                </div>
+                                <div class="divNameClient">
+                                    <div>
+                                        <a href="Entrepreneur.html">
+                                        <p class="NameClientOffer">علي</p>
+                                        </a>
+                                    </div>
+                                    <div class="divIconClient">
+                                        <div class=" divClockRateClient">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
+                                                <g id="suitcase" transform="translate(0 -2)">
+                                                <path id="Path_1933" data-name="Path 1933" d="M11.5,4.25a.5.5,0,0,1-.5-.5V3H9v.75a.5.5,0,1,1-1,0V3A1,1,0,0,1,9,2h2a1,1,0,0,1,1,1v.75A.5.5,0,0,1,11.5,4.25Z" transform="translate(-4)" fill="#a2a2a6"/>
+                                                <path id="Path_1934" data-name="Path 1934" d="M6.355,13.5A1.03,1.03,0,0,1,6,13.56a1.1,1.1,0,0,1-.385-.07L0,11.62v3.815A1.374,1.374,0,0,0,1.375,16.81h9.25A1.374,1.374,0,0,0,12,15.435V11.62Z" transform="translate(0 -4.81)" fill="#a2a2a6"/>
+                                                <path id="Path_1935" data-name="Path 1935" d="M12,6.375V7.52L6.12,9.48a.37.37,0,0,1-.24,0L0,7.52V6.375A1.374,1.374,0,0,1,1.375,5h9.25A1.374,1.374,0,0,1,12,6.375Z" transform="translate(0 -1.5)" fill="#a2a2a6"/>
+                                                </g>
+                                            </svg>
+                                            <label class="lblInfoPosiOffers">صاحب مشاريع</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divInfoLawyerOfferDetails divLawOfferDetails">
+                            <p class="pTitledivInfoOffers">المحامي</p>
+                            <div class="flexInfoClient">
+                                <div class="imgProfileOffer imgProfileClientOffer">
+                                    <div class="relaIconVerfiyOffer">
+                                    <img src="img/lawyer.png" alt="">
+                                    </div>
+                                    <div class="absoIconVerfiyOffer">
+                                    <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                        <path id="Path_1914" data-name="Path 1914" d="M12.306,4.012a1.607,1.607,0,0,0-.252-1.857l-.209-.209a1.552,1.552,0,0,0-1.857-.252,1.252,1.252,0,0,1-1.364-.566A1.49,1.49,0,0,0,7.143,0l-.36.018A1.556,1.556,0,0,0,5.306,1.573c.028.359-.588.625-.946.392a1.572,1.572,0,0,0-2.224,0l-.172.172a1.591,1.591,0,0,0-.225,1.94.95.95,0,0,1-.4,1.269A1.606,1.606,0,0,0,0,6.882v.26A1.613,1.613,0,0,0,1.167,8.619c.671.238.618,1.223.55,1.341a1.573,1.573,0,0,0,.247,1.9l.172.172a1.607,1.607,0,0,0,1.894.253,1.141,1.141,0,0,1,1.329.551A1.519,1.519,0,0,0,6.878,14H7.1a1.593,1.593,0,0,0,1.518-1.112,1.09,1.09,0,0,1,1.42-.578,1.689,1.689,0,0,0,1.839-.29l.157-.157a1.572,1.572,0,0,0,0-2.224c-.276-.25.079-.941.392-.946A1.573,1.573,0,0,0,14,7.122V6.853a1.534,1.534,0,0,0-1.156-1.517C12.39,5.236,12.159,4.319,12.306,4.012Z" transform="translate(0)" fill="#1bc703"/>
+                                        <path id="Path_1915" data-name="Path 1915" d="M137.215,172.25l-1.825-1.825a.56.56,0,0,1,.792-.792l1.429,1.429,3.087-3.087a.56.56,0,0,1,.792.792l-3.482,3.483A.64.64,0,0,1,137.215,172.25Z" transform="translate(-131.439 -163.113)" fill="#fff"/>
+                                      </svg>
+                                    </div>
+                                </div>
+                                <div class="divNameClient">
+                                    <div>
+                                        <a href="profile_Office.html">
+                                        <p class="NameClientOffer">مكتب فرسان العدالة</p>
+                                        </a>
+                                    </div>
+                                    <div class="divIconClient">
+                                        <div class=" divClockRateClient">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
+                                                <g id="suitcase" transform="translate(0 -2)">
+                                                <path id="Path_1933" data-name="Path 1933" d="M11.5,4.25a.5.5,0,0,1-.5-.5V3H9v.75a.5.5,0,1,1-1,0V3A1,1,0,0,1,9,2h2a1,1,0,0,1,1,1v.75A.5.5,0,0,1,11.5,4.25Z" transform="translate(-4)" fill="#a2a2a6"/>
+                                                <path id="Path_1934" data-name="Path 1934" d="M6.355,13.5A1.03,1.03,0,0,1,6,13.56a1.1,1.1,0,0,1-.385-.07L0,11.62v3.815A1.374,1.374,0,0,0,1.375,16.81h9.25A1.374,1.374,0,0,0,12,15.435V11.62Z" transform="translate(0 -4.81)" fill="#a2a2a6"/>
+                                                <path id="Path_1935" data-name="Path 1935" d="M12,6.375V7.52L6.12,9.48a.37.37,0,0,1-.24,0L0,7.52V6.375A1.374,1.374,0,0,1,1.375,5h9.25A1.374,1.374,0,0,1,12,6.375Z" transform="translate(0 -1.5)" fill="#a2a2a6"/>
+                                                </g>
+                                            </svg>
+                                            <label class="lblInfoPosiOffers">خدمات استشارية</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                </div>
+            </div>
+            
+       
+        <div class="contentAddOffer">
+            <div class="headAddOffer">
+                <p class="titleHeadAddOffer">نقاش العرض</p>
+            </div>
+            <div class="bodyChatOffer">
+               <div class="divMsgChatOffer divMsgChatOfferFirst">
+                   <div class="msgChatOfferDetails">
+                    <div class="flexInfoClient">
+                        <div class="imgProfile imgProfileChatOffer imgNofi">
+                            <img src="img/download.jpg" alt="">
+                        </div>
+                        <div class="divNameClient ">
+                            <div>
+                               <a href="Entrepreneur.html">
+                                        <p class="NameClientOffer">علي</p>
+                                        </a>
+                            </div>
+                            <div class="divIconClient">
+                                <div class="divClockOfferDetails">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pDescChatOffer">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                   </div>
+               </div>
+               <div class="divMsgChatOffer">
+                <div class="msgChatOfferDetails">
+                 <div class="flexInfoClient">
+                     <div class="imgProfile imgProfileChatOffer imgNofi">
+                         <img src="img/lawyer.png" alt="">
+                     </div>
+                     <div class="divNameClient ">
+                         <div>
+                             <a href="profile_Office.html">
+                             <p class="NameClientOffer">مكتب فرسان العدالة </p>
+                            </a>
+                         </div>
+                         <div class="divIconClient">
+                             <div class="divClockOfferDetails">
+                                 <i class="far fa-clock"></i>
+                                 <label>منذ 3 أيام و6 ساعات</label>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <p class="pDescChatOffer">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+               </div>
+               <div class="divMsgChatOffer">
+                <div class="msgChatOfferDetails">
+                 <div class="flexInfoClient">
+                     <div class="imgProfile imgProfileChatOffer imgNofi">
+                         <img src="img/download.jpg" alt="">
+                     </div>
+                     <div class="divNameClient ">
+                         <div>
+                            <a href="Entrepreneur.html">
+                                        <p class="NameClientOffer">علي</p>
+                                        </a>
+                         </div>
+                         <div class="divIconClient">
+                             <div class="divClockOfferDetails">
+                                 <i class="far fa-clock"></i>
+                                 <label>منذ 3 أيام و6 ساعات</label>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <p class="pDescChatOffer">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+                </div>
+               </div>
+               <div class="divOfferDetails divOfferDetailsChat">
+               <div class="textareaDescriptionOfferDetails">
+                <textarea class="contentScroll">
+                </textarea>                        
+                <div class="browseFileDetails">
+                    
+                    <label class="filelabel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.802" height="18" viewBox="0 0 16.802 18">
+                        <g id="_x38_2_attachment" transform="translate(-2.001 -1)">
+                            <path id="Path_1875" data-name="Path 1875" d="M18.8,5.8A4.769,4.769,0,0,1,17.4,9.2l-8.647,8.75a3.6,3.6,0,1,1-5.095-5.089L9.9,6.644a2.361,2.361,0,0,1,3.324-.068,2.232,2.232,0,0,1,.649,1.663A2.443,2.443,0,0,1,13.153,9.9L7.225,15.826a.6.6,0,1,1-.849-.849L12.3,9.049a1.244,1.244,0,0,0,.371-.845,1.044,1.044,0,0,0-.3-.78,1.16,1.16,0,0,0-1.629.07L4.5,13.705A2.4,2.4,0,0,0,7.9,17.1l8.647-8.75a3.6,3.6,0,1,0-5.089-5.094L3.023,11.627a.6.6,0,0,1-.846-.852L10.609,2.4A4.8,4.8,0,0,1,18.8,5.8Z" fill="#8e8e93"/>
+                        </g>
+                    </svg>                                  
+                    <input class="FileUpload1" id="FileInput" name="booking_attachment" type="file"/>
+
+                    </label>
+
+                </div>
+               </div>
+               <div class="divbtnAddOffer">
+               <button class="btnAddOffer">ارسال</button>
+               </div>
+            </div>
+            </div>
+        </div>
+        <div class="contentAddOffer" id="SecContentAddOffer">
+            <div class="headAddOffer headProposalOffes">
+                <p class="titleHeadAddOffer">العروض المقدمة</p>
+                <button class="btnddlistOffices btnToggleOffers">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
+                        <g id="play" transform="translate(15) rotate(90)">
+                            <g id="Group_180" data-name="Group 180" transform="translate(0 0)">
+                            <path id="Path_99" data-name="Path 99" d="M9.263,6.107,1.867.4A1.683,1.683,0,0,0,.9,0C.342,0,0,.5,0,1.337V13.665C0,14.5.342,15,.893,15a1.67,1.67,0,0,0,.967-.4l7.4-5.7A1.759,1.759,0,0,0,10,7.5,1.753,1.753,0,0,0,9.263,6.107Z" transform="translate(0 0)" fill="#c5c5c5"/>
+                            </g>
+                        </g>
+                    </svg>
+                </button>        
+            </div>
+            <div class="bodyWaitOffer">
+                <div class="row">
+                    <div class="col-lg-10 col-md-8 col-12">
+                        <div class="flexInfoClient divcontentOffice">
+                            <div class="imgProfile imgProfileClient imgNofi">
+                                <img src="img/lawyer.png" alt="">
+                                <div class="absoIconVerfiyOffice">
+                                    <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="Path_1914" data-name="Path 1914" d="M17.58,5.731a2.3,2.3,0,0,0-.359-2.653l-.3-.3a2.217,2.217,0,0,0-2.653-.359,1.789,1.789,0,0,1-1.949-.809A2.128,2.128,0,0,0,10.2,0L9.69.026a2.223,2.223,0,0,0-2.11,2.22c.04.514-.84.894-1.351.559a2.246,2.246,0,0,0-3.177,0l-.246.246a2.273,2.273,0,0,0-.321,2.772,1.357,1.357,0,0,1-.575,1.813A2.3,2.3,0,0,0,0,9.832V10.2a2.3,2.3,0,0,0,1.668,2.109c.959.34.883,1.747.785,1.916a2.247,2.247,0,0,0,.353,2.719l.246.246a2.3,2.3,0,0,0,2.706.361,1.63,1.63,0,0,1,1.9.787A2.171,2.171,0,0,0,9.826,20h.32a2.275,2.275,0,0,0,2.169-1.588,1.558,1.558,0,0,1,2.028-.826,2.413,2.413,0,0,0,2.627-.414l.224-.224a2.246,2.246,0,0,0,0-3.177c-.394-.358.113-1.344.559-1.351A2.246,2.246,0,0,0,20,10.174V9.789a2.191,2.191,0,0,0-1.651-2.167C17.7,7.48,17.37,6.17,17.58,5.731Z" transform="translate(0)" fill="#1bc703"></path>
+                                        <path id="Path_1915" data-name="Path 1915" d="M138.067,174.152l-2.607-2.607a.8.8,0,0,1,1.131-1.131l2.041,2.041,4.409-4.409a.8.8,0,0,1,1.131,1.131l-4.975,4.975A.914.914,0,0,1,138.067,174.152Z" transform="translate(-129.817 -161.099)" fill="#fff"></path>
+                                      </svg>
+                                      
+                                </div>
+                            </div>
+                            <div class="divNameClient">
+                                <div class="flexHeadNameOffice">
+                                    <a href="profile_Office.html">
+                                    <p class="pNameflexHeadNameOffice pNametoggleOffers">مكتب فرسان العدالة</p>
+                                   </a>
+                                    <div class="divStarts divStartsProfile">
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div> 
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divIconClient divIconOffices">
+                                    <div class=" divClockRateClient">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.333" viewBox="0 0 16 13.333">
+                                            <g id="suitcase" transform="translate(0 -2)">
+                                              <path id="Path_1933" data-name="Path 1933" d="M12.667,5A.667.667,0,0,1,12,4.333v-1H9.333v1A.667.667,0,1,1,8,4.333v-1A1.335,1.335,0,0,1,9.333,2H12a1.335,1.335,0,0,1,1.333,1.333v1A.667.667,0,0,1,12.667,5Z" transform="translate(-2.667)" fill="#8e8e93"/>
+                                              <path id="Path_1934" data-name="Path 1934" d="M8.473,14.127a1.374,1.374,0,0,1-.473.08,1.461,1.461,0,0,1-.513-.093L0,11.62v5.087A1.832,1.832,0,0,0,1.833,18.54H14.167A1.832,1.832,0,0,0,16,16.707V11.62Z" transform="translate(0 -3.207)" fill="#8e8e93"/>
+                                              <path id="Path_1935" data-name="Path 1935" d="M16,6.833V8.36L8.16,10.973a.493.493,0,0,1-.32,0L0,8.36V6.833A1.832,1.832,0,0,1,1.833,5H14.167A1.832,1.832,0,0,1,16,6.833Z" transform="translate(0 -1)" fill="#8e8e93"/>
+                                            </g>
+                                          </svg>
+                                          
+                                        <label class="lblInfoOffices">خدمات استشارية</label>
+                                    </div>
+                                    <div class="divClockRate">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 4 أيام و 6 ساعات</label>
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <p class="txtLastNoti">هذا النص هو مثال لنص يمكن أن يستبدل في  المساحةهذا النص هو مثال لنص يمكن أن يستبدل في  المساحة </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-8 col-12 colddlistOffices">
+                        <div class="divcolddlistOffices">
+                            <button class="btnddlistOffices btnToggleProposal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
+                                    <g id="play" transform="translate(15) rotate(90)">
+                                        <g id="Group_180" data-name="Group 180" transform="translate(0 0)">
+                                        <path id="Path_99" data-name="Path 99" d="M9.263,6.107,1.867.4A1.683,1.683,0,0,0,.9,0C.342,0,0,.5,0,1.337V13.665C0,14.5.342,15,.893,15a1.67,1.67,0,0,0,.967-.4l7.4-5.7A1.759,1.759,0,0,0,10,7.5,1.753,1.753,0,0,0,9.263,6.107Z" transform="translate(0 0)" fill="#c5c5c5"/>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>                          
+                            </div>
+                        </div>
+                </div>
+                <hr>
+                <div class="lawProposal">
+
+                <div class="backInfoChatOffer">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-3 col-12 ">
+                            <div>
+                                <p class="pbackInfoChatOffer">الميزانية:</p>
+                                <p class="numbackInfoChatOffer"> 15 ريال سعودي</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-12 colDayChatOffer">
+                            <div>
+                                <p class="pbackInfoChatOffer">مدة التنفيذ:</p>
+                                <p class="numbackInfoChatOffer"> 3 أيام</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-12 colPortfolioChatOffer">
+                            <div>
+                                <p class="pbackInfoChatOffer">معرض أعمالك:</p>
+                                <p class="numbackInfoChatOffer"> 16</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="pDescChatofferDetails pDescWaitDetails">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                        هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+                        
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                        هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
+                </div>
+                </div> 
+                <div class="row">
+                    <div class="col-lg-10 col-md-8 col-12">
+                        <div class="flexInfoClient divcontentOffice">
+                            <div class="imgProfile imgProfileClient imgNofi">
+                                <img src="img/lawyer.png" alt="">
+                                <div class="absoIconVerfiyOffice">
+                                    <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="Path_1914" data-name="Path 1914" d="M17.58,5.731a2.3,2.3,0,0,0-.359-2.653l-.3-.3a2.217,2.217,0,0,0-2.653-.359,1.789,1.789,0,0,1-1.949-.809A2.128,2.128,0,0,0,10.2,0L9.69.026a2.223,2.223,0,0,0-2.11,2.22c.04.514-.84.894-1.351.559a2.246,2.246,0,0,0-3.177,0l-.246.246a2.273,2.273,0,0,0-.321,2.772,1.357,1.357,0,0,1-.575,1.813A2.3,2.3,0,0,0,0,9.832V10.2a2.3,2.3,0,0,0,1.668,2.109c.959.34.883,1.747.785,1.916a2.247,2.247,0,0,0,.353,2.719l.246.246a2.3,2.3,0,0,0,2.706.361,1.63,1.63,0,0,1,1.9.787A2.171,2.171,0,0,0,9.826,20h.32a2.275,2.275,0,0,0,2.169-1.588,1.558,1.558,0,0,1,2.028-.826,2.413,2.413,0,0,0,2.627-.414l.224-.224a2.246,2.246,0,0,0,0-3.177c-.394-.358.113-1.344.559-1.351A2.246,2.246,0,0,0,20,10.174V9.789a2.191,2.191,0,0,0-1.651-2.167C17.7,7.48,17.37,6.17,17.58,5.731Z" transform="translate(0)" fill="#1bc703"></path>
+                                        <path id="Path_1915" data-name="Path 1915" d="M138.067,174.152l-2.607-2.607a.8.8,0,0,1,1.131-1.131l2.041,2.041,4.409-4.409a.8.8,0,0,1,1.131,1.131l-4.975,4.975A.914.914,0,0,1,138.067,174.152Z" transform="translate(-129.817 -161.099)" fill="#fff"></path>
+                                      </svg>
+                                      
+                                </div>
+                            </div>
+                            <div class="divNameClient">
+                                <div class="flexHeadNameOffice">
+                                    <a href="profile_Guest.html">
+                                    <p class="pNameflexHeadNameOffice pNametoggleOffers">مكتب أحمد</p>
+                                   </a>
+                                    <div class="divStarts divStartsProfile">
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div> 
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divIconClient divIconOffices">
+                                    <div class=" divClockRateClient">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.333" viewBox="0 0 16 13.333">
+                                            <g id="suitcase" transform="translate(0 -2)">
+                                              <path id="Path_1933" data-name="Path 1933" d="M12.667,5A.667.667,0,0,1,12,4.333v-1H9.333v1A.667.667,0,1,1,8,4.333v-1A1.335,1.335,0,0,1,9.333,2H12a1.335,1.335,0,0,1,1.333,1.333v1A.667.667,0,0,1,12.667,5Z" transform="translate(-2.667)" fill="#8e8e93"/>
+                                              <path id="Path_1934" data-name="Path 1934" d="M8.473,14.127a1.374,1.374,0,0,1-.473.08,1.461,1.461,0,0,1-.513-.093L0,11.62v5.087A1.832,1.832,0,0,0,1.833,18.54H14.167A1.832,1.832,0,0,0,16,16.707V11.62Z" transform="translate(0 -3.207)" fill="#8e8e93"/>
+                                              <path id="Path_1935" data-name="Path 1935" d="M16,6.833V8.36L8.16,10.973a.493.493,0,0,1-.32,0L0,8.36V6.833A1.832,1.832,0,0,1,1.833,5H14.167A1.832,1.832,0,0,1,16,6.833Z" transform="translate(0 -1)" fill="#8e8e93"/>
+                                            </g>
+                                          </svg>
+                                          
+                                        <label class="lblInfoOffices">خدمات استشارية</label>
+                                    </div>
+                                    <div class="divClockRate">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 4 أيام و 6 ساعات</label>
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <p class="txtLastNoti">هذا النص هو مثال لنص يمكن أن يستبدل في  المساحةهذا النص هو مثال لنص يمكن أن يستبدل في  المساحة </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="flexInfoClient divcontentOffice">
+                            <div class="imgProfile imgProfileClient imgNofi">
+                                <img src="img/lawyer.png" alt="">
+                                <div class="absoIconVerfiyOffice">
+                                    <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="Path_1914" data-name="Path 1914" d="M17.58,5.731a2.3,2.3,0,0,0-.359-2.653l-.3-.3a2.217,2.217,0,0,0-2.653-.359,1.789,1.789,0,0,1-1.949-.809A2.128,2.128,0,0,0,10.2,0L9.69.026a2.223,2.223,0,0,0-2.11,2.22c.04.514-.84.894-1.351.559a2.246,2.246,0,0,0-3.177,0l-.246.246a2.273,2.273,0,0,0-.321,2.772,1.357,1.357,0,0,1-.575,1.813A2.3,2.3,0,0,0,0,9.832V10.2a2.3,2.3,0,0,0,1.668,2.109c.959.34.883,1.747.785,1.916a2.247,2.247,0,0,0,.353,2.719l.246.246a2.3,2.3,0,0,0,2.706.361,1.63,1.63,0,0,1,1.9.787A2.171,2.171,0,0,0,9.826,20h.32a2.275,2.275,0,0,0,2.169-1.588,1.558,1.558,0,0,1,2.028-.826,2.413,2.413,0,0,0,2.627-.414l.224-.224a2.246,2.246,0,0,0,0-3.177c-.394-.358.113-1.344.559-1.351A2.246,2.246,0,0,0,20,10.174V9.789a2.191,2.191,0,0,0-1.651-2.167C17.7,7.48,17.37,6.17,17.58,5.731Z" transform="translate(0)" fill="#1bc703"></path>
+                                        <path id="Path_1915" data-name="Path 1915" d="M138.067,174.152l-2.607-2.607a.8.8,0,0,1,1.131-1.131l2.041,2.041,4.409-4.409a.8.8,0,0,1,1.131,1.131l-4.975,4.975A.914.914,0,0,1,138.067,174.152Z" transform="translate(-129.817 -161.099)" fill="#fff"></path>
+                                      </svg>
+                                      
+                                </div>
+                            </div>
+                            <div class="divNameClient">
+                                <div class="flexHeadNameOffice">
+                                    <a href="profile_Guest.html">
+                                    <p class="pNameflexHeadNameOffice pNametoggleOffers">مكتب أحمد</p>
+                                   </a>
+                                    <div class="divStarts divStartsProfile">
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div> 
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divIconClient divIconOffices">
+                                    <div class=" divClockRateClient">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.333" viewBox="0 0 16 13.333">
+                                            <g id="suitcase" transform="translate(0 -2)">
+                                              <path id="Path_1933" data-name="Path 1933" d="M12.667,5A.667.667,0,0,1,12,4.333v-1H9.333v1A.667.667,0,1,1,8,4.333v-1A1.335,1.335,0,0,1,9.333,2H12a1.335,1.335,0,0,1,1.333,1.333v1A.667.667,0,0,1,12.667,5Z" transform="translate(-2.667)" fill="#8e8e93"/>
+                                              <path id="Path_1934" data-name="Path 1934" d="M8.473,14.127a1.374,1.374,0,0,1-.473.08,1.461,1.461,0,0,1-.513-.093L0,11.62v5.087A1.832,1.832,0,0,0,1.833,18.54H14.167A1.832,1.832,0,0,0,16,16.707V11.62Z" transform="translate(0 -3.207)" fill="#8e8e93"/>
+                                              <path id="Path_1935" data-name="Path 1935" d="M16,6.833V8.36L8.16,10.973a.493.493,0,0,1-.32,0L0,8.36V6.833A1.832,1.832,0,0,1,1.833,5H14.167A1.832,1.832,0,0,1,16,6.833Z" transform="translate(0 -1)" fill="#8e8e93"/>
+                                            </g>
+                                          </svg>
+                                          
+                                        <label class="lblInfoOffices">خدمات استشارية</label>
+                                    </div>
+                                    <div class="divClockRate">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 4 أيام و 6 ساعات</label>
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <p class="txtLastNoti">هذا النص هو مثال لنص يمكن أن يستبدل في  المساحةهذا النص هو مثال لنص يمكن أن يستبدل في  المساحة </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-lg-10 col-md-8 col-12">
+                        <div class="flexInfoClient divcontentOffice">
+                            <div class="imgProfile imgProfileClient imgNofi">
+                                <img src="img/lawyer.png" alt="">
+                                <div class="absoIconVerfiyOffice">
+                                    <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                        <path id="Path_1914" data-name="Path 1914" d="M17.58,5.731a2.3,2.3,0,0,0-.359-2.653l-.3-.3a2.217,2.217,0,0,0-2.653-.359,1.789,1.789,0,0,1-1.949-.809A2.128,2.128,0,0,0,10.2,0L9.69.026a2.223,2.223,0,0,0-2.11,2.22c.04.514-.84.894-1.351.559a2.246,2.246,0,0,0-3.177,0l-.246.246a2.273,2.273,0,0,0-.321,2.772,1.357,1.357,0,0,1-.575,1.813A2.3,2.3,0,0,0,0,9.832V10.2a2.3,2.3,0,0,0,1.668,2.109c.959.34.883,1.747.785,1.916a2.247,2.247,0,0,0,.353,2.719l.246.246a2.3,2.3,0,0,0,2.706.361,1.63,1.63,0,0,1,1.9.787A2.171,2.171,0,0,0,9.826,20h.32a2.275,2.275,0,0,0,2.169-1.588,1.558,1.558,0,0,1,2.028-.826,2.413,2.413,0,0,0,2.627-.414l.224-.224a2.246,2.246,0,0,0,0-3.177c-.394-.358.113-1.344.559-1.351A2.246,2.246,0,0,0,20,10.174V9.789a2.191,2.191,0,0,0-1.651-2.167C17.7,7.48,17.37,6.17,17.58,5.731Z" transform="translate(0)" fill="#1bc703"></path>
+                                        <path id="Path_1915" data-name="Path 1915" d="M138.067,174.152l-2.607-2.607a.8.8,0,0,1,1.131-1.131l2.041,2.041,4.409-4.409a.8.8,0,0,1,1.131,1.131l-4.975,4.975A.914.914,0,0,1,138.067,174.152Z" transform="translate(-129.817 -161.099)" fill="#fff"></path>
+                                      </svg>
+                                      
+                                </div>
+                            </div>
+                            <div class="divNameClient">
+                                <div class="flexHeadNameOffice">
+                                    <a href="profile_Guest.html">
+                                    <p class="pNameflexHeadNameOffice pNametoggleOffers">مكتب أحمد</p>
+                                   </a>
+                                    <div class="divStarts divStartsProfile">
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div> 
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-star star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divIconClient divIconOffices">
+                                    <div class=" divClockRateClient">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.333" viewBox="0 0 16 13.333">
+                                            <g id="suitcase" transform="translate(0 -2)">
+                                              <path id="Path_1933" data-name="Path 1933" d="M12.667,5A.667.667,0,0,1,12,4.333v-1H9.333v1A.667.667,0,1,1,8,4.333v-1A1.335,1.335,0,0,1,9.333,2H12a1.335,1.335,0,0,1,1.333,1.333v1A.667.667,0,0,1,12.667,5Z" transform="translate(-2.667)" fill="#8e8e93"/>
+                                              <path id="Path_1934" data-name="Path 1934" d="M8.473,14.127a1.374,1.374,0,0,1-.473.08,1.461,1.461,0,0,1-.513-.093L0,11.62v5.087A1.832,1.832,0,0,0,1.833,18.54H14.167A1.832,1.832,0,0,0,16,16.707V11.62Z" transform="translate(0 -3.207)" fill="#8e8e93"/>
+                                              <path id="Path_1935" data-name="Path 1935" d="M16,6.833V8.36L8.16,10.973a.493.493,0,0,1-.32,0L0,8.36V6.833A1.832,1.832,0,0,1,1.833,5H14.167A1.832,1.832,0,0,1,16,6.833Z" transform="translate(0 -1)" fill="#8e8e93"/>
+                                            </g>
+                                          </svg>
+                                          
+                                        <label class="lblInfoOffices">خدمات استشارية</label>
+                                    </div>
+                                    <div class="divClockRate">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 4 أيام و 6 ساعات</label>
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <p class="txtLastNoti">هذا النص هو مثال لنص يمكن أن يستبدل في  المساحةهذا النص هو مثال لنص يمكن أن يستبدل في  المساحة </p>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- <div class="contentAddOffer">
+            <div class="headAddOffer">
+                <p class="titleHeadAddOffer">العرض الذي قمت بتقديمه  </p>
+            </div>
+            <div class="bodyDescriptionOffer">
+                <div class="flexInfoClient flexChatOfferClient">
+                    <div class="imgProfileOffer imgProfileChatOffer">
+                        <div class="relaIconVerfiyOffer">
+                        <img src="img/lawyer.png" alt="">
+                        </div>
+                        <div class="absoIconVerfiyCahtOffer">
+                        <svg id="tick-mark" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                            <path id="Path_1914" data-name="Path 1914" d="M12.306,4.012a1.607,1.607,0,0,0-.252-1.857l-.209-.209a1.552,1.552,0,0,0-1.857-.252,1.252,1.252,0,0,1-1.364-.566A1.49,1.49,0,0,0,7.143,0l-.36.018A1.556,1.556,0,0,0,5.306,1.573c.028.359-.588.625-.946.392a1.572,1.572,0,0,0-2.224,0l-.172.172a1.591,1.591,0,0,0-.225,1.94.95.95,0,0,1-.4,1.269A1.606,1.606,0,0,0,0,6.882v.26A1.613,1.613,0,0,0,1.167,8.619c.671.238.618,1.223.55,1.341a1.573,1.573,0,0,0,.247,1.9l.172.172a1.607,1.607,0,0,0,1.894.253,1.141,1.141,0,0,1,1.329.551A1.519,1.519,0,0,0,6.878,14H7.1a1.593,1.593,0,0,0,1.518-1.112,1.09,1.09,0,0,1,1.42-.578,1.689,1.689,0,0,0,1.839-.29l.157-.157a1.572,1.572,0,0,0,0-2.224c-.276-.25.079-.941.392-.946A1.573,1.573,0,0,0,14,7.122V6.853a1.534,1.534,0,0,0-1.156-1.517C12.39,5.236,12.159,4.319,12.306,4.012Z" transform="translate(0)" fill="#1bc703"/>
+                            <path id="Path_1915" data-name="Path 1915" d="M137.215,172.25l-1.825-1.825a.56.56,0,0,1,.792-.792l1.429,1.429,3.087-3.087a.56.56,0,0,1,.792.792l-3.482,3.483A.64.64,0,0,1,137.215,172.25Z" transform="translate(-131.439 -163.113)" fill="#fff"/>
+                          </svg>
+                        </div>
+                    </div>
+                    <div class="divNameClient">
+                        <div>
+                            <a href="Entrepreneur.html">
+                            <p class="NameClientOffer">محمد عيد</p>
+                            </a>
+                        </div>
+                        <div class="divIconClient">
+                            <div class="divClockOfferClient">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10">
+                                    <g id="suitcase" transform="translate(0 -2)">
+                                    <path id="Path_1933" data-name="Path 1933" d="M11.5,4.25a.5.5,0,0,1-.5-.5V3H9v.75a.5.5,0,1,1-1,0V3A1,1,0,0,1,9,2h2a1,1,0,0,1,1,1v.75A.5.5,0,0,1,11.5,4.25Z" transform="translate(-4)" fill="#a2a2a6"/>
+                                    <path id="Path_1934" data-name="Path 1934" d="M6.355,13.5A1.03,1.03,0,0,1,6,13.56a1.1,1.1,0,0,1-.385-.07L0,11.62v3.815A1.374,1.374,0,0,0,1.375,16.81h9.25A1.374,1.374,0,0,0,12,15.435V11.62Z" transform="translate(0 -4.81)" fill="#a2a2a6"/>
+                                    <path id="Path_1935" data-name="Path 1935" d="M12,6.375V7.52L6.12,9.48a.37.37,0,0,1-.24,0L0,7.52V6.375A1.374,1.374,0,0,1,1.375,5h9.25A1.374,1.374,0,0,1,12,6.375Z" transform="translate(0 -1.5)" fill="#a2a2a6"/>
+                                    </g>
+                                </svg>
+                                <label class="lblInfoPosiOffers">خدمات استشارية</label>
+                            </div>
+                            <div class="divIconClient">
+                                <div class="divClockOfferDetails">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="backInfoChatOffer">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-3 col-12 ">
+                            <div>
+                                <p class="pbackInfoChatOffer">الميزانية:</p>
+                                <p class="numbackInfoChatOffer"> 15 ريال سعودي</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-12 colDayChatOffer">
+                            <div>
+                                <p class="pbackInfoChatOffer">مدة التنفيذ:</p>
+                                <p class="numbackInfoChatOffer"> 3 أيام</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3 col-12 colPortfolioChatOffer">
+                            <div>
+                                <p class="pbackInfoChatOffer">معرض أعمالك:</p>
+                                <p class="numbackInfoChatOffer"> 16</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <div>
+                    <p class="pDescChatofferDetails">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                        هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+                        
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+                        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
+                        ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                        هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.</p>
+                </div>  
+            </div>
+            
+        </div> -->
+        </div>
+    </div>
+    <!-- end content -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="row rowLinksFooter">
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">عنا</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">خدماتنا</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">الأسئلة الشائعة</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">لماذا نحن</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">شروط الاستخدام</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">بيان الخصوصية</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">شركاء النجاح</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">كلمة الرئيس التنفيذي</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">تواصل معنا</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrTopFooter">
+            <div class="row">
+                <div class="col-md-6 co-12">
+                    <div class="row divFollowUs">
+                        <div class="col-lg-1 col-md-2 col-12 colFollow">
+                            <P class="pFooter">تابعنا</P>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="footerSocialIcons row">
+                                <div class=" col-lg-2 col-md-4 col-3 colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.234" height="26" viewBox="0 0 13.234 26">
+                                                    <g id="facebook-logo" transform="translate(-123.395)">
+                                                    <g id="Group_157" data-name="Group 157" transform="translate(123.395 0)">
+                                                        <path id="Path_86" data-name="Path 86" d="M136.629,9.287h-4.761V6.966s-.267-2.207,1.276-2.207h3.136V0h-5.34s-4.469-.019-4.469,4.469c0,.964,0,2.719-.011,4.818h-3.066v3.832h3.058C126.435,19.21,126.414,26,126.414,26h5.454V13.118h3.6Z" transform="translate(-123.395 0)" fill="#00586b"/>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-facebook-f"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-3 colTwitter colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.5" viewBox="0 0 24 19.5">
+                                                    <path id="twitter_1_" data-name="twitter (1)" d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.305,9.305,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z" transform="translate(0 -2.25)" fill="#00586b"/>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-twitter"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-3 colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24.001" viewBox="0 0 24 24.001">
+                                                    <g id="instagram" transform="translate(-0.005)">
+                                                    <g id="Group_159" data-name="Group 159" transform="translate(0.005)">
+                                                        <g id="Group_158" data-name="Group 158" transform="translate(0)">
+                                                        <path id="Path_87" data-name="Path 87" d="M18,0H6A6.018,6.018,0,0,0,0,6V18a6.019,6.019,0,0,0,6,6h12a6.019,6.019,0,0,0,6-6V6A6.018,6.018,0,0,0,18,0Zm4,18a4,4,0,0,1-4,4h-12a4,4,0,0,1-4-4V6a4,4,0,0,1,4-4h12a4,4,0,0,1,4,4V18Z" transform="translate(-0.005)" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_161" data-name="Group 161" transform="translate(17.006 4)">
+                                                        <g id="Group_160" data-name="Group 160">
+                                                        <circle id="Ellipse_21" data-name="Ellipse 21" cx="1.5" cy="1.5" r="1.5" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_163" data-name="Group 163" transform="translate(6.005 6)">
+                                                        <g id="Group_162" data-name="Group 162">
+                                                        <path id="Path_88" data-name="Path 88" d="M108.4,102.4a6,6,0,1,0,6,6A6,6,0,0,0,108.4,102.4Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,108.4,112.4Z" transform="translate(-102.405 -102.4)" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-instagram"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 co-12">
+                    <div class="row divFollowUs ourApps">
+                        <div class="col-lg-2 col-md-2 col-12 colApps">
+                            <P class="pFooter">تطبيقاتنا</P>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="footerSocialIcons footerSocialIconsApps row">
+                                <div class="col-lg-2 col-md-4 col-3  colFacebook">
+                                    <a href="#">
+                                        <div class="backSocialIcons">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24.384" viewBox="0 0 20 24.384">
+                                                <g id="apple" transform="translate(-46.022)">
+                                                <path id="Path_93" data-name="Path 93" d="M52.653,136.724c-3.629-.021-6.631-7.429-6.631-11.2,0-6.163,4.623-7.512,6.4-7.512a7.37,7.37,0,0,1,2.417.594,5.4,5.4,0,0,0,1.38.4,4.294,4.294,0,0,0,.99-.321,7.934,7.934,0,0,1,2.984-.721H60.2a6.116,6.116,0,0,1,5.118,2.585l.373.561-.537.405a4.52,4.52,0,0,0-2.168,3.727,4.207,4.207,0,0,0,2.347,3.889c.336.2.684.411.684.867,0,.3-2.377,6.694-5.83,6.694a4.689,4.689,0,0,1-1.969-.478,3.992,3.992,0,0,0-1.752-.422,4.507,4.507,0,0,0-1.388.375,6.8,6.8,0,0,1-2.407.562Z" transform="translate(0 -112.34)" fill="#00586b"/>
+                                                <path id="Path_94" data-name="Path 94" d="M259.735,0c.09,3.242-2.229,5.491-4.545,5.35C254.809,2.763,257.506,0,259.735,0Z" transform="translate(-199.173)" fill="#00586b"/>
+                                                </g>
+                                            </svg>
+                                            
+                                            <!-- <i class="fab fa-apple"></i> -->
+                                        </div>
+                                    </a>  
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-3  colFacebook">
+                                    <a href="#">
+                                        <div class="backSocialIcons">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23.447" viewBox="0 0 20 23.447">
+                                                <g id="android-logo_1_" data-name="android-logo (1)" transform="translate(-37.134 0)">
+                                                <g id="Group_165" data-name="Group 165" transform="translate(37.134 0)">
+                                                    <g id="Group_164" data-name="Group 164" transform="translate(0 0)">
+                                                    <path id="Path_89" data-name="Path 89" d="M38.592,164.715h-.06a1.4,1.4,0,0,0-1.4,1.4V172.2a1.4,1.4,0,0,0,1.4,1.4h.061a1.4,1.4,0,0,0,1.4-1.4v-6.086A1.4,1.4,0,0,0,38.592,164.715Z" transform="translate(-37.134 -157.069)" fill="#00586b"/>
+                                                    <path id="Path_90" data-name="Path 90" d="M113.085,179.134a1.286,1.286,0,0,0,1.285,1.283h1.373V183.7a1.4,1.4,0,0,0,1.4,1.4h.06a1.4,1.4,0,0,0,1.4-1.4v-3.287h1.918V183.7a1.4,1.4,0,0,0,1.4,1.4h.059a1.4,1.4,0,0,0,1.4-1.4v-3.287h1.374a1.286,1.286,0,0,0,1.284-1.283v-9.609H113.085Z" transform="translate(-109.56 -161.656)" fill="#00586b"/>
+                                                    <path id="Path_91" data-name="Path 91" d="M121.9,2.042,122.99.359a.232.232,0,0,0-.068-.32.23.23,0,0,0-.32.068l-1.13,1.741a7.474,7.474,0,0,0-5.592,0L114.75.106a.232.232,0,0,0-.391.252l1.091,1.683a5.52,5.52,0,0,0-3.294,4.866c0,.128.008.254.019.379h13c.011-.125.018-.251.018-.379A5.522,5.522,0,0,0,121.9,2.042Zm-6.238,3.014a.624.624,0,1,1,.626-.625A.625.625,0,0,1,115.661,5.056Zm6.027,0a.624.624,0,1,1,.625-.625A.625.625,0,0,1,121.688,5.056Z" transform="translate(-108.675 0)" fill="#00586b"/>
+                                                    <path id="Path_92" data-name="Path 92" d="M407.927,164.715h-.058a1.4,1.4,0,0,0-1.4,1.4V172.2a1.4,1.4,0,0,0,1.4,1.4h.059a1.4,1.4,0,0,0,1.4-1.4v-6.086A1.4,1.4,0,0,0,407.927,164.715Z" transform="translate(-389.326 -157.069)" fill="#00586b"/>
+                                                    </g>
+                                                </g>
+                                                </g>
+                                            </svg>
+                                            
+                                            <!-- <i class="fab fa-android"></i> -->
+                                        </div>
+                                    </a>  
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrBottomFooter">
+            <div>
+                <p class="copyright">Ⓒ2021 بوابة الاستشارات الإلكترونية.جميع الحقوق محفوظة </p>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+
+    <!-- start buttonTop-->
+    <button onclick="topFunction()" id="Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("Top");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- end buttonTop-->
+    <script>
+    function functionMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("moreBio");
+  var btnText = document.getElementById("btnMoreBio");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "المزيد";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "أقل";
+    moreText.style.display = "inline";
+  }
+}
+    </script>
+    <script>
+    function Copyfunc() {
+  /* Get the text field */
+  var copyText = document.getElementById("txtLinkOfferDetails");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the link: " + copyText.value);
+}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/morefunction.js"></script>
+</body>
+</html>
