@@ -1,0 +1,63 @@
+
+
+.multiselect {
+    text-align: right;
+  }
+  .multiselect__option--highlight, .multiselect__tag{
+    background-color: #f2f2f2;
+    color: #000; 
+  }
+  
+  .multiselect__option--highlight::after {
+    display: none !important;
+  }
+  .multiselect__tag{
+  padding: 10px 10px 10px 26px;
+      border-radius: 18px;
+  }
+  .multiselect__tag-icon{
+        display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 0;
+      right: auto;
+  }
+  .multiselect__tag-icon:after{
+    color: #606060;
+      font-size: 17px;
+  }
+  .multiselect__tag-icon:focus, .multiselect__tag-icon:hover{
+    background:transparent;
+    color: #000;
+  }
+  .multiselect__tag-icon:focus:after, .multiselect__tag-icon:hover:after{
+     color: #000;
+  }
+
+  .modBody{
+   .divmodImg{
+    height: 492px;
+    max-height: 492px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+   } 
+  }
+  img{
+    object-fit: cover;
+    object-position: top;
+  }
+  .carousel-control-next, .carousel-control-prev{
+    background: #0000004f;
+    border: none;
+  }
+  .divBio{
+    text-align: justify;
+  }
+
+  .pAddWorksPort , .pAddWorksPort{
+    text-align: right;
+  }

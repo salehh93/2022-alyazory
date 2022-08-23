@@ -414,7 +414,9 @@
         <div class="divMyWorkHome" style="width: 316px">
           <p class="pMyWorkHome">أعمالي</p>
           <router-link :to="{ name: 'lawyer-portfolio' }">
-            <p class="numMyWorkHome">6</p>
+            <p class="numMyWorkHome">
+              {{workNumber}}
+            </p>
           </router-link>
         </div>
         <div class="divAddWorkHome" style="width: 316px">
@@ -442,8 +444,10 @@
         </div>
       </div>
     </div>
-    <div style="display: flex" class="boxMediaHome">
-      <div class="colBoxesHome" style="width: 364px">
+    <div class="row g-3">
+      <div class="col-lg-4">
+  <div >
+      <div class="colBoxesHome" >
         <div class="divColCalenderHome">
           <p class="pServicesHome titleBoxesHome">مهامي</p>
           <div class="divcontentCalenderHome">
@@ -528,7 +532,9 @@
         </div>
       </div>
     </div>
-    <div class="colBoxesHome" style="width: 748px">
+      </div>
+       <div class="col-lg-8">
+         <div class="" >
       <div class="divLastOffers">
         <p class="pServicesHome titleBoxesHome">آخر العروض المضافة</p>
         <div
@@ -563,6 +569,10 @@
         </div>
       </div>
     </div>
+      </div>
+    </div>
+  
+   
   </div>
 
   <!-- end Content -->
@@ -573,6 +583,7 @@ export default {
   data() {
     return {
       last_added_requests: [],
+      workNumber:0,
     };
   },
   computed: {
@@ -597,6 +608,16 @@ export default {
   },
   mounted() {
     this.getLastAdded();
+
+      
+      this.$http
+        .get("lawyer/auth/lawyer/galleries")
+        .then((res) => {
+          this.workNumber = res.data.data.length
+        });
+   
+
+
   },
 };
 </script>

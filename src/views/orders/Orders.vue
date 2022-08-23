@@ -19,7 +19,7 @@
             <!-- <p class="NameCard"> محمد أحمد عيد </p> -->
           </div>
           <div class="divPositionCard">
-            <p>محامي نظامي قانوني</p>
+            <p>محامي {{$store.state.user.experience[0].Speciality}}</p>
           </div>
         </div>
         <div class="divClassify">
@@ -128,14 +128,14 @@
         <div class="row rowWelcome">
           <div class="col-md-6 col-12">
             <div class="divWelcome">
-              <h2>الأربعاء، 2/ ديسمبر</h2>
-              <p>مساء الخير،</p>
+              <h2>{{datenow}}</h2>
+              <p>مرحباً بعودتك</p>
               <p>{{ $store.state.user.name }}</p>
             </div>
           </div>
           <div class="col-md-6 col-12">
             <div class="divImgWelcome">
-              <img src="img/imgWelcome.PNG" alt="" />
+              <img src="../../assets/img/imgWelcome.png" alt="" />
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@
           </div>
         </div>
         <div class="divOrders">
-          <div v-for="(req, i) in requests" :key="i" class="row">
+          <div v-for="(req, i) in requests.reverse()" :key="i" class="row mb-3  pb-2 border-bottom">
             <div class="col-lg-10 col-md-9 col-12">
               <router-link
                 :to="`/${type === 'user' ? 'order-view' : 'order-details'}/${
@@ -198,17 +198,24 @@
               >
                 <p class="OrderTitle">{{ req.title }}</p></router-link
               >
-              <p class="OrderDescription">{{ req.description }}</p>
+              <p class="OrderDescription">{{ req.description | truncate(180, '...') }}</p>
               <div class="divIcons row">
                 <div class="col-lg-3 col-12">
+                                    <a >
+                                    <i class="fas fa-user iconOrders"></i>
+                                    <label class="lblOrders mx-1">{{req.client}}</label>
+                                    </a>
+                                </div>
+
+                <div class="col-lg-3 col-12">
                   <i class="far fa-clock iconOrders"></i>
-                  <label class="lblOrders">{{
+                  <label class="lblOrders mx-1">{{
                     req.created_at.toString().substr(0, 10)
                   }}</label>
                 </div>
                 <div class="col-lg-3 col-12">
                   <i class="fas fa-tag iconOrders"></i>
-                  <label class="lblOrders">عدد العروض</label>
+                  <label class="lblOrders mx-1" v-text="req.lawyerOffer_count == null ? 0 : req.lawyerOffer_count"></label>
                 </div>
               </div>
             </div>
@@ -295,6 +302,7 @@ export default {
     return {
       requests: [],
       type: "",
+      datenow:""
     };
   },
   created() {
@@ -302,6 +310,7 @@ export default {
   },
   mounted() {
     this.getRequests();
+     this.date_function()
   },
   methods: {
     getRequests() {
@@ -314,6 +323,18 @@ export default {
         this.requests = res.data.data.request;
       });
     },
+
+   date_function: function () {
+   
+            var currentDate = new Date();
+            console.log(currentDate);
+  
+            var formatted_date = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+            console.log(formatted_date);
+            this.datenow = formatted_date ;
+     
+        }
+
   },
 };
 </script>

@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!--calendar-->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <!--End calendar-->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="icon" href="img/Logo.PNG" size="16*16">
+    <title>Lawyer | Home</title>
+    <style>
+        /* calendar */
+.calendar-content .days-row{
+    flex-wrap: wrap !important;
+}
+.calendar.compact{
+    width: auto !important;
+    border: none;
+}
+.calendar-content .days, .calendar-content .week-days{
+    display: flex !important;
+}
+.calendar .days .day, .calendar .months .month, .calendar .years .year{
+    border: none;
+}
+.calendar.compact .day+.day{
+    border-radius: 50%;
+    font-family: Almarai !important;
+}
+.calendar-content .day.showed{
+    background: #EBF5F7;
+    color: black;
+}
+.calendar-content{
+    font-family: Almarai !important;
+}
+.calendar-footer{
+    border: none;
+}
+.calendar-content .week-days,.calendar .calendar-content .calendar-toolbar{
+    border: none;
+}
+.calendar.compact .calendar-header{
+    background: none;
+    color: #00586B;
+    text-align: right;
+}
+.calendar-content .today{
+    background: #EBF5F7;
+    color: black;
+}
+.calendar{
+    height: 340px;
+    font-family: Almarai;
+}
+.calendar.compact .calendar-header .header-day{
+    font-size: 24px;
+}
+.navbar-collapse{
+    overflow: visible !important;
+    max-height: inherit !important;
+}
+.container-fluid::after, .container2::after, .container::after, aside::after, footer::after, header::after, section::after{
+    display: none;
+}
+body{
+    line-height:inherit;
+}
+/* calendar */
+    </style>
+</head>
+<body>
+         <!-- Start Header -->
+         <nav class="navbar navbar-expand-lg">
+            <div class="container">
+            <div style="display: flex; align-items: center;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo.PNG" alt="Logo">
+                </a>
+                <form class="form-inline my-2 my-lg-0 formSearch">
+                    
+                    <input class="form-control mr-sm-2 txtSearch"  placeholder="&#61442   بحث" type="search" aria-label="Search">
+                    <!-- <div class="PlaceholderSearch">
+                        <svg id="Mask" xmlns="http://www.w3.org/2000/svg" width="22" height="21.594" viewBox="0 0 22 21.594">
+                            <path id="Mask-2" data-name="Mask" d="M19.22,21.118,13.654,15.55a1.639,1.639,0,0,1-.168-.2A8.555,8.555,0,0,1,0,8.458a8.543,8.543,0,0,1,17.085,0,8.349,8.349,0,0,1-1.37,4.59,1.635,1.635,0,0,1,.242.2l5.567,5.567a1.629,1.629,0,0,1-2.3,2.3ZM1.8,8.458A6.744,6.744,0,1,0,8.542,1.78,6.718,6.718,0,0,0,1.8,8.458Z" transform="translate(0 0)" fill="#fff" style="mix-blend-mode: color-burn;isolation: isolate"/>
+                            <path id="Mask-3" data-name="Mask" d="M19.22,21.118,13.654,15.55a1.639,1.639,0,0,1-.168-.2A8.555,8.555,0,0,1,0,8.458a8.543,8.543,0,0,1,17.085,0,8.349,8.349,0,0,1-1.37,4.59,1.635,1.635,0,0,1,.242.2l5.567,5.567a1.629,1.629,0,0,1-2.3,2.3ZM1.8,8.458A6.744,6.744,0,1,0,8.542,1.78,6.718,6.718,0,0,0,1.8,8.458Z" transform="translate(0 0)" fill="#fff"/>
+                        </svg>
+                        <label>بحث</label>
+                    </div> -->
+                </form>
+            </div>
+          <div style="display: flex;">
+          
+            <div class="collapse navbar-collapse navCollapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto containerCollapes">
+                <li class="nav-item active ordersLink">
+                  <a class="nav-link" href="Orders.html">تصفح الطلبات <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Offers.html">عروضي</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Portfolio.html">أعمالي</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="favorite.html">المفضلات</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Balance.html">الرصيد</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Settings.html">إعدادات</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="Edit_Profile.html">تعديل الملف الشخصي</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="#">مساعدة</a>
+                </li>
+                <li class="nav-item navItemMobile">
+                    <a class="nav-link" href="login.html">تسجيل الخروج</a>
+                </li>
+              </ul>
+          
+            </div>
+            <div style="display: flex; align-items: center;">
+            <div style="display: flex;  align-items: center;">
+            <div class="nav-item dropdown">
+    
+            <a class="nav-link linkNotificationHead" style="display: flex; align-items: center;" id="navbarDropdownNotifi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.546" height="27.133" viewBox="0 0 22.546 27.133">
+                        <g id="_13252117381571183079_1_" data-name="13252117381571183079 (1)" transform="translate(-4.575 -2.75)">
+                          <path id="Path_15" data-name="Path 15" d="M25.7,21.162l-.985-1.471a14.5,14.5,0,0,1-2.365-8.042,6.6,6.6,0,0,0-4.631-6.375,2.012,2.012,0,0,0-3.744,0,6.6,6.6,0,0,0-4.631,6.375,14.5,14.5,0,0,1-2.365,8.042L6,21.162a.936.936,0,0,0,.788,1.471H24.818A.993.993,0,0,0,25.7,21.162Z" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/>
+                          <path id="Path_16" data-name="Path 16" d="M19,26a3,3,0,0,1-6,0" transform="translate(-0.149 -0.367)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"/>
+                        </g>
+                      </svg>
+            </a>
+            <div class="dropdown-menu ddlistMsgHead" aria-labelledby="navbarDropdownMsg">
+                <div class="flexHeadddlistMsgHead">
+                    <p class="pflexHeadddlistMsgHead">الاشعارات</p>
+                        <a href="Notifications.html">
+                          <p class="linkflexHeadddlistMsgHead">عرض الكل</p>  
+                        </a>
+                </div>
+                
+                 
+                    <div class="flexContentMsgHead">
+                        <div class="imgddlistMsgHead">
+                            <img src="img/download.jpg" alt="">
+                        </div>
+                        <div>
+                        <div class="flexNotReadMsg">
+                          <p class="pTitlemsgHead notReadMsg"><a class="addlistNoti" href="#">أمجد محمود</a> أضاف تقييم على عرض <a class="addlistNoti" href="#">دعوة قضائيةلموضوع النفقة</a></p>
+                         <div>
+                          <div class="divNotReadMsg"></div>
+                        </div>
+                        </div>
+                            <div class="divClockOfferDetails divClockddlistMsg">
+                                <i class="far fa-clock"></i>
+                                <label>منذ 3 أيام و6 ساعات</label>
+                            </div>
+                        </div>
+                    </div>
+               
+              
+                    <div class="flexContentMsgHead">
+                        <div class="imgddlistMsgHead">
+                            <img src="img/download.jpg" alt="">
+                        </div>
+                        <div>
+                        <div class="flexNotReadMsg">
+                          <p class="pTitlemsgHead notReadMsg">مبروك ،، لقد وصلت أرباحك إلى حسابك في باي بال  <a class="addlistNoti" href="#">تفاصيل المعاملات المالية</a></p>
+                         <div>
+                          <div class="divNotReadMsg"></div>
+                        </div>
+                        </div>
+                            <div class="divClockOfferDetails divClockddlistMsg">
+                                <i class="far fa-clock"></i>
+                                <label>منذ 3 أيام و6 ساعات</label>
+                            </div>
+                        </div>
+                    </div>
+                  
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                            <div class="flexNotReadMsg">
+                              <p class="pTitlemsgHead notReadMsg"><a class="addlistNoti" href="#">أمجد محمود</a> أضاف تقييم على عرض <a class="addlistNoti" href="#">دعوة قضائيةلموضوع النفقة</a></p>
+                             <div>
+                              <div class="divNotReadMsg"></div>
+                            </div>
+                            </div>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a class="nav-link linkMsgsHead" style="display: flex; align-items: center;" id="navbarDropdownNotifi" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26.25" height="24.792" viewBox="0 0 26.25 24.792">
+                        <path id="Path_18" data-name="Path 18" d="M12.5,3h5.25a10.339,10.339,0,0,1,10.5,10.171,10.339,10.339,0,0,1-10.5,10.171v4.45C11.188,25.249,2,21.435,2,13.171A10.339,10.339,0,0,1,12.5,3Zm2.625,17.8H17.75a7.755,7.755,0,0,0,7.875-7.628A7.755,7.755,0,0,0,17.75,5.543H12.5a7.755,7.755,0,0,0-7.875,7.628c0,4.59,3.231,7.585,10.5,10.781Z" transform="translate(-2 -3)" fill="#fff"/>
+                    </svg>
+                </a>
+                <div class="dropdown-menu ddlistMsgHead" aria-labelledby="navbarDropdownMsg">
+                    <div class="flexHeadddlistMsgHead">
+                        <p class="pflexHeadddlistMsgHead">الرسائل</p>
+                            <a href="Messages.html">
+                              <p class="linkflexHeadddlistMsgHead">عرض الكل</p>  
+                            </a>
+                    </div>
+                    <a class="dropdown-item" href="Messages.html">
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="flexNotReadMsg">
+                                <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                <div class="divNotReadMsg"></div>
+                                </div>
+                                <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item" href="Messages.html">
+                            <div class="flexContentMsgHead">
+                                <div class="imgddlistMsgHead">
+                                    <img src="img/download.jpg" alt="">
+                                </div>
+                                <div>
+                                    <div class="flexNotReadMsg">
+                                    <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                    <div class="divNotReadMsg"></div>
+                                    </div>
+                                    <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                    <div class="divClockOfferDetails divClockddlistMsg">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 3 أيام و6 ساعات</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                    <a class="dropdown-item" href="Messages.html">
+                        <div class="flexContentMsgHead">
+                            <div class="imgddlistMsgHead">
+                                <img src="img/download.jpg" alt="">
+                            </div>
+                            <div>
+                                <div class="flexNotReadMsg">
+                                <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                <div class="divNotReadMsg"></div>
+                                </div>
+                                <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                <div class="divClockOfferDetails divClockddlistMsg">
+                                    <i class="far fa-clock"></i>
+                                    <label>منذ 3 أيام و6 ساعات</label>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        <a class="dropdown-item" href="Messages.html">
+                            <div class="flexContentMsgHead">
+                                <div class="imgddlistMsgHead">
+                                    <img src="img/download.jpg" alt="">
+                                </div>
+                                <div>
+                                    <div class="flexNotReadMsg">
+                                    <p class="pTitlemsgHead notReadMsg">استشارة قانونية مستعجلة</p>
+                                    <div class="divNotReadMsg"></div>
+                                    </div>
+                                    <p class="descTitlemsgHead">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة أن يستبدل في نفس المساحة</p>
+                                    <div class="divClockOfferDetails divClockddlistMsg">
+                                        <i class="far fa-clock"></i>
+                                        <label>منذ 3 أيام و6 ساعات</label>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                </div>
+            </div>
+             
+              
+            </div>
+            <div style="display: flex; ">
+            <a class="nav-link LinkImgProfile"  style="display: inline-block; padding: 12px;" href="profile_lawyer.html">
+                <img src="img/lawyer.png" alt="">
+            </a>
+            <button class="navbar-toggler btnToggleHead" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            </div>
+            </div>
+    
+            <div class="nav-item dropdown dropdownHeadPages">
+                <a class="nav-link ddlistMoreHead" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg id="Group_88" data-name="Group 88" xmlns="http://www.w3.org/2000/svg" width="6" height="36" viewBox="0 0 8 36">
+                        <circle id="Ellipse_2" data-name="Ellipse 2" cx="4" cy="4" r="4" fill="#fff"/>
+                        <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(0 28)" fill="#fff"/>
+                        <circle id="Ellipse_4" data-name="Ellipse 4" cx="4" cy="4" r="4" transform="translate(0 14)" fill="#fff"/>
+                      </svg>
+                  
+                </a>
+                <div class="dropdown-menu ddlistHead" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item aLinksMenuHead" href="profile_lawyer.html">
+                    <img class="imgddlistHead" src="img/lawyer.png" alt="">
+                    <label>الملف الشخصي</label>
+                       
+                    </a>
+                  <a class="dropdown-item aLinksMenuHead" href="favorite.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.79" height="15.212" viewBox="0 0 16.79 15.212">
+                        <g id="heart" transform="translate(0.395 -16.746)">
+                          <g id="Group_195" data-name="Group 195" transform="translate(0 16.896)">
+                            <path id="Path_100" data-name="Path 100" d="M14.692,18.294a4.372,4.372,0,0,0-6.408,0l-.282.3-.282-.3a4.375,4.375,0,0,0-6.183-.227q-.118.109-.227.227a4.907,4.907,0,0,0,0,6.672l6.278,6.62a.572.572,0,0,0,.808.022l.022-.022,6.275-6.62A4.906,4.906,0,0,0,14.692,18.294Zm-.827,5.884h0L8,30.361,2.138,24.178a3.749,3.749,0,0,1,0-5.1A3.232,3.232,0,0,1,6.705,18.9q.1.088.184.184l.7.735a.589.589,0,0,0,.83,0l.7-.735A3.232,3.232,0,0,1,13.68,18.9q.1.088.184.184A3.715,3.715,0,0,1,13.864,24.178Z" transform="translate(0 -16.896)" fill="#00586b" stroke="#00586b" stroke-width="0.3"/>
+                          </g>
+                        </g>
+                      </svg>
+                      <label >المفضلات</label>
+                      
+                    </a>
+                  <a class="dropdown-item aLinksMenuHead" href="Balance.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.182" height="17.253" viewBox="0 0 17.182 17.253">
+                        <g id="money_2_" data-name="money (2)" transform="translate(-0.217 0.143)">
+                          <path id="Path_1937" data-name="Path 1937" d="M17.3,4.784A.81.81,0,0,0,17,4.24L11.785.172a.819.819,0,0,0-1.146.14L5.591,6.747,2.242,8.99h0l-.925.619-.646.432-.033.024a.816.816,0,0,0-.191,1.109h0l.782,1.165.271.4,1.578,2.351h0l.262.39.789,1.175a.817.817,0,0,0,1.132.223h0l1.533-1.026.677.529a.818.818,0,0,0,1.146-.14l2.658-3.388,3.875-2.594.015-.009L16.736,9.2a.816.816,0,0,0,.224-1.132h0L16.07,6.743l1.064-1.357a.811.811,0,0,0,.168-.6Zm-14.8,6.208a2.189,2.189,0,0,1-.738,1.256l-.792-1.18L.862,10.9a.318.318,0,0,1,.062-.422l.025-.019.448-.3.9-.605a2.188,2.188,0,0,1,.205,1.441Zm2.478,5.477a.319.319,0,0,1-.441-.086l-.011-.016-.893-1.33a2.215,2.215,0,0,1,2.7.525Zm3.241-.532a.319.319,0,0,1-.447.055l-.548-.428,2.71-1.814ZM14.9,8.252A2.189,2.189,0,0,1,15.639,7l.906,1.35a.318.318,0,0,1-.088.44l-1.352.9a2.188,2.188,0,0,1-.2-1.44Zm1.841-3.173-.964,1.229-2.5-3.725a.818.818,0,0,0-1.132-.223L9.936,3.838a.249.249,0,0,0,.277.414l.436-.292a2.713,2.713,0,0,0,3.4.663L15.36,6.58a2.7,2.7,0,0,0-.671,3.39l-3.727,2.5h0L6.756,15.281a2.714,2.714,0,0,0-3.4-.662L2.047,12.663A2.684,2.684,0,0,0,3,11.088a2.682,2.682,0,0,0-.278-1.816L9.056,5.028a.249.249,0,0,0-.277-.414L6.926,5.854,11.031.62a.319.319,0,0,1,.447-.055l5.21,4.068a.317.317,0,0,1,.054.446Zm-4.319-2.3a.319.319,0,0,1,.442.086l.457.681.447.666a2.215,2.215,0,0,1-2.7-.525Z" transform="translate(0)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1938" data-name="Path 1938" d="M155.706,191.556a3.272,3.272,0,0,0,1.2,5.93A.25.25,0,0,0,157,197a2.769,2.769,0,1,1,1.293-.054.249.249,0,0,0,.137.48,3.274,3.274,0,1,0-2.723-5.866Z" transform="translate(-148.827 -184.653)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1939" data-name="Path 1939" d="M359.781,183.079a.248.248,0,0,0,.138-.042l1.174-.786a.249.249,0,0,0-.277-.414l-1.174.786a.249.249,0,0,0,.139.457Z" transform="translate(-347.28 -175.751)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1940" data-name="Path 1940" d="M97.077,358.411,95.9,359.2a.249.249,0,1,0,.277.414l1.174-.786a.249.249,0,0,0-.277-.414Z" transform="translate(-92.309 -346.456)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                          <path id="Path_1941" data-name="Path 1941" d="M209.186,233.8a.249.249,0,0,0,.414-.278l-.134-.2a1.127,1.127,0,0,0,.208-1.246c-.27-.6-.825-.648-1.389-.515l-.566-.843a.657.657,0,0,1,.264-.033.249.249,0,0,0,.074-.493,1.192,1.192,0,0,0-.622.1l-.11-.163a.249.249,0,0,0-.414.278l.12.178a.968.968,0,0,0-.184,1.038c.22.515.714.576,1.21.492l.728,1.085a.9.9,0,0,1-.478.105.25.25,0,0,0,.006.5,1.378,1.378,0,0,0,.751-.189Zm-1.619-2.144a.343.343,0,0,1-.262-.227.458.458,0,0,1,.016-.407l.424.632A1.245,1.245,0,0,1,207.567,231.654ZM208.6,232a.5.5,0,0,1,.621.284.639.639,0,0,1-.044.607l-.6-.887Z" transform="translate(-199.597 -222.375)" fill="#00586b" stroke="#00586b" stroke-width="0.18"/>
+                        </g>
+                      </svg>  
+                      <label >الرصيد</label>                
+                    
+                </a>
+                  <a class="dropdown-item aLinksMenuHead" href="Settings.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16.508" viewBox="0 0 16 16.508">
+                        <path id="setting_2_" data-name="setting (2)" d="M23.4,9.566,22.715,9a.967.967,0,0,1,0-1.493l.687-.565A1.286,1.286,0,0,0,23.7,5.3L22.343,2.953a1.286,1.286,0,0,0-1.569-.563l-.833.312a.967.967,0,0,1-1.293-.747L18.5,1.078A1.286,1.286,0,0,0,17.229,0H14.517a1.286,1.286,0,0,0-1.272,1.078l-.146.877a.967.967,0,0,1-1.293.747l-.833-.312A1.286,1.286,0,0,0,9.4,2.953L8.047,5.3a1.286,1.286,0,0,0,.3,1.641l.687.565A.967.967,0,0,1,9.031,9l-.687.565a1.286,1.286,0,0,0-.3,1.641L9.4,13.555a1.286,1.286,0,0,0,1.569.563l.833-.312a.967.967,0,0,1,1.293.747l.146.877a1.286,1.286,0,0,0,1.272,1.078h2.712A1.286,1.286,0,0,0,18.5,15.43l.146-.877a.967.967,0,0,1,1.293-.747l.833.312a1.286,1.286,0,0,0,1.569-.563L23.7,11.206a1.286,1.286,0,0,0-.3-1.64ZM21.226,12.91l-.833-.312a2.257,2.257,0,0,0-3.018,1.742l-.146.877H14.517l-.146-.877A2.257,2.257,0,0,0,11.353,12.6l-.833.312L9.164,10.562,9.851,10a2.257,2.257,0,0,0,0-3.485l-.687-.565L10.52,3.6l.833.312a2.257,2.257,0,0,0,3.018-1.742l.146-.877h2.712l.146.877A2.257,2.257,0,0,0,20.393,3.91l.833-.312,1.356,2.348h0l-.687.565A2.257,2.257,0,0,0,21.9,10l.687.565ZM15.873,5.073a3.181,3.181,0,1,0,3.181,3.181A3.185,3.185,0,0,0,15.873,5.073Zm0,5.073a1.892,1.892,0,1,1,1.892-1.892A1.894,1.894,0,0,1,15.873,10.145Z" transform="translate(-7.873 0)" fill="#00586b"/>
+                      </svg>                  
+                      <label>إعدادات</label>
+                    </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item aLinksMenuHead" href="Edit_Profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.999" viewBox="0 0 16 15.999">
+                        <g id="edit_2_" data-name="edit (2)" transform="translate(0 -0.501)">
+                          <path id="Path_1942" data-name="Path 1942" d="M12.667,91.149a.666.666,0,0,0-.667.667v5.333a.667.667,0,0,1-.667.667H2a.667.667,0,0,1-.667-.667V87.816A.667.667,0,0,1,2,87.149H7.333a.667.667,0,0,0,0-1.333H2a2,2,0,0,0-2,2v9.333a2,2,0,0,0,2,2h9.333a2,2,0,0,0,2-2V91.816a.666.666,0,0,0-.667-.667Zm0,0" transform="translate(0 -82.649)" fill="#00586b"/>
+                          <path id="Path_1943" data-name="Path 1943" d="M182.378,73.537a.337.337,0,0,0-.091.17l-.471,2.357a.333.333,0,0,0,.327.4.317.317,0,0,0,.065-.007l2.357-.471a.332.332,0,0,0,.171-.091l5.275-5.275-2.357-2.357Zm0,0" transform="translate(-176.127 -65.643)" fill="#00586b"/>
+                          <path id="Path_1944" data-name="Path 1944" d="M394.725.989a1.668,1.668,0,0,0-2.357,0l-.923.923L393.8,4.268l.923-.923a1.666,1.666,0,0,0,0-2.357Zm0,0" transform="translate(-379.213 0)" fill="#00586b"/>
+                        </g>
+                      </svg>               
+                      <label>تعديل الملف الشخصي</label>   
+                </a>
+                  <a class="dropdown-item aLinksMenuHead" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16.38" height="16.38" viewBox="0 0 16.38 16.38">
+                        <g id="help" transform="translate(0.191 0.19)">
+                          <path id="Path_1945" data-name="Path 1945" d="M13.656,2.343A8,8,0,0,0,2.343,13.657,8,8,0,0,0,13.656,2.343Zm-.331,10.982A7.531,7.531,0,0,1,2.674,2.675,7.531,7.531,0,0,1,13.325,13.325Zm0,0" transform="translate(0)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1946" data-name="Path 1946" d="M61.487,265.907a.235.235,0,0,0-.254.213,6.032,6.032,0,0,1-12.017,0,.234.234,0,0,0-.467.04,6.5,6.5,0,0,0,12.952,0,.234.234,0,0,0-.213-.254Zm0,0" transform="translate(-47.225 -257.597)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1947" data-name="Path 1947" d="M48.978,54.183a.234.234,0,0,0,.254-.213,6.032,6.032,0,0,1,12.017.005.234.234,0,0,0,.233.214h.02a.234.234,0,0,0,.213-.254,6.5,6.5,0,0,0-12.951-.006.234.234,0,0,0,.213.254Zm0,0" transform="translate(-47.241 -46.501)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1948" data-name="Path 1948" d="M215.558,338.027a1.046,1.046,0,0,0,0,2.091,1.046,1.046,0,1,0,0-2.091Zm0,1.623a.572.572,0,0,1-.565-.577.579.579,0,0,1,.565-.577.577.577,0,1,1,0,1.154Zm0,0" transform="translate(-207.821 -327.464)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                          <path id="Path_1949" data-name="Path 1949" d="M177.683,111.822l.012-.01c.037-.034.082-.074.135-.121a3.3,3.3,0,0,0,1.348-2.389c0-1.325-1.107-2.251-2.692-2.251a2.871,2.871,0,0,0-1.781.537,1.476,1.476,0,0,0-.649,1.105.8.8,0,0,0,.831.807.785.785,0,0,0,.641-.387.963.963,0,0,1,.922-.436c.3,0,.995.077.995.792,0,.539-.409.876-.8,1.2-.1.085-.2.166-.29.249a2.48,2.48,0,0,0-.792,2.058c0,.42.089.9.783.9.75,0,.831-.464.831-.664,0-.695.02-.993.51-1.393Zm-.3-.358a1.871,1.871,0,0,0-.677,1.752c0,.078,0,.2-.362.2-.193,0-.231-.045-.244-.06a.612.612,0,0,1-.071-.374,2.029,2.029,0,0,1,.638-1.71l0,0c.077-.073.17-.149.268-.23a2.077,2.077,0,0,0,.975-1.563c0-.766-.574-1.26-1.463-1.26a1.425,1.425,0,0,0-1.291.615c-.13.166-.174.208-.272.208a.344.344,0,0,1-.362-.338c0-.4.592-1.173,1.961-1.173,1.33,0,2.223.716,2.223,1.782a2.857,2.857,0,0,1-1.189,2.038C177.466,111.386,177.42,111.426,177.38,111.463Zm0,0" transform="translate(-168.616 -103.706)" fill="#00586b" stroke="#00586b" stroke-width="0.38"/>
+                        </g>
+                      </svg>    
+                      <label>مساعدة</label>                
+                    
+                </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item aLinksMenuHead" href="login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                        <g id="log-out" transform="translate(-126.235 -159.242)">
+                          <path id="Path_1950" data-name="Path 1950" d="M127.635,169.042v1.4a2.8,2.8,0,0,0,2.8,2.8h7a2.8,2.8,0,0,0,2.8-2.8v-8.4a2.8,2.8,0,0,0-2.8-2.8h-7a2.8,2.8,0,0,0-2.8,2.8v1.4a.7.7,0,0,0,1.4,0v-1.4a1.4,1.4,0,0,1,1.4-1.4h7a1.4,1.4,0,0,1,1.4,1.4v8.4a1.4,1.4,0,0,1-1.4,1.4h-7a1.4,1.4,0,0,1-1.4-1.4v-1.4a.7.7,0,0,0-1.4,0Zm5.31-3.5-.905-.9a.7.7,0,0,1,.99-.99l2.1,2.1a.7.7,0,0,1,0,.99l-2.1,2.1a.7.7,0,0,1-.99-.99l.905-.905h-6.01a.7.7,0,1,1,0-1.4Z" fill="#00586b" fill-rule="evenodd"/>
+                        </g>
+                      </svg>
+                        <label>تسجيل الخروج</label>
+                </a>
+                </div>
+            </div> 
+        </div>
+        </div>
+        </nav>
+        <!-- End Header -->
+    <!-- Start Content -->
+    <div class="container">
+        <div class="pagesLinks">
+            <a href="index.html">الرئيسية</a>
+        </div>
+        <h3 class="hTitle">أهلاً بعودتك، لدينا الكثير لننجزه </h3>
+        <div style="display: flex;" class="boxMediaHome">
+            <div class=" colBoxesHome" style="width:460px">
+                    <div class="boxesHome">
+                        <div class="divbtnEditCardInfo">
+                            <button class="btnEditCardInfo">
+                            <a href="Edit_Profile.html" style="color:#8E8E93; display: flex;">
+                                تعديل
+                                <svg id="Rounded" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <g id="Image" transform="translate(0 0)">
+                                      <g id="_-Round-_-Image-_-edit" data-name="-Round-/-Image-/-edit">
+                                        <g id="Group_98" data-name="Group 98">
+                                          <path id="Path" d="M0,0H16V16H0Z" fill="none" fill-rule="evenodd"/>
+                                          <path id="_-Icon-Color" data-name="🔹-Icon-Color" d="M3,11.033v1.689A.275.275,0,0,0,3.278,13H4.967a.261.261,0,0,0,.194-.083l6.067-6.062L9.145,4.771,3.083,10.833A.273.273,0,0,0,3,11.033Zm9.84-5.79a.553.553,0,0,0,0-.783l-1.3-1.3a.553.553,0,0,0-.783,0L9.74,4.177,11.823,6.26Z" fill="#8e8e93" fill-rule="evenodd"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>
+                                </a>
+                                </button>
+                        </div>
+                        <div class="cardInfo">
+                        <div class="divImgCard">
+                            <img src="img/lawyer.png" alt="">
+                        </div>
+                        <div class="divNameCard">
+                            <a href="profile_lawyer.html">
+                            <label>المحامي: محمد أحمد عيد</label>
+                            </a>
+                            <!-- <p class="NameCard"> محمد أحمد عيد </p> -->
+                        </div>
+                        <div class="divPositionCard">
+                            <p>محامي نظامي قانوني</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <div class=" colBoxesHome" style="width:652px">
+                <div class="rowWelcome divServicesHome boxesHome" style="padding-right: 0px; padding-left: 0px;">
+                    <div class="divContentServices">
+                        <p class="pServicesHome">خدماتك</p>
+                        <div style="display: flex;padding-left: 98px; padding-right: 98px;" class="rowBoxImgsServicesHome">
+                            <div class="colServiceHome">
+                                <button class="btnServicesHome btnServicesHomeBalance">
+                                <div class="backbtnHomeServices">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="45.93" viewBox="0 0 50 45.93">
+                                        <g id="cash_2_" data-name="cash (2)" transform="translate(0 -0.174)">
+                                        <path id="Path_27" data-name="Path 27" d="M34.573,76.211a7.143,7.143,0,1,0-7.143-7.143,7.143,7.143,0,0,0,7.143,7.143Zm0-13.1a5.952,5.952,0,1,1-5.952,5.952A5.952,5.952,0,0,1,34.573,63.116ZM17.729,55.133a1.2,1.2,0,0,1,1.411-.91l20.053,4.038h6.094L19.371,53.042a2.4,2.4,0,0,0-2.509,1.082,2.567,2.567,0,0,0-.3.77L15.748,59a3.522,3.522,0,0,1,1.338-.638Z" transform="translate(-11.061 -37.101)" fill="#00596b" stroke="#00586b" stroke-width="0.3"/>
+                                        <path id="Path_28" data-name="Path 28" d="M18.3,24.468a3.68,3.68,0,0,1,1.355-.524l.307-1.338a1.116,1.116,0,0,1,1.086-.879c.089,0,32.078,7.883,32.078,7.883A1.169,1.169,0,0,1,54,30.751a3.713,3.713,0,0,1,1.158.457,2.409,2.409,0,0,0-1.754-2.8l-31.81-7.85a2.271,2.271,0,0,0-2.576,1.2C18.864,22.084,18.32,24.366,18.3,24.468Zm20.833-1.444a.893.893,0,1,0-.893-.893A.893.893,0,0,0,39.131,23.024Zm0-1.339a.446.446,0,1,1-.446.446A.446.446,0,0,1,39.131,21.685Zm-3.274-6.1a.6.6,0,1,0-.6-.6A.6.6,0,0,0,35.857,15.583Zm0-.893a.3.3,0,1,1-.3.3.3.3,0,0,1,.3-.3Zm13.69.893a.893.893,0,1,0-.893-.893.893.893,0,0,0,.893.893Zm0-1.339a.446.446,0,1,1-.446.446A.446.446,0,0,1,49.548,14.244ZM60.262,27.488a.893.893,0,1,0-.893.893.893.893,0,0,0,.893-.893Zm-1.339,0a.446.446,0,1,1,.446.446A.446.446,0,0,1,58.923,27.488ZM18.6,14.69a.6.6,0,1,0-.6-.6.6.6,0,0,0,.6.6Zm0-.893a.3.3,0,1,1-.3.3A.3.3,0,0,1,18.6,13.8Z" transform="translate(-12.643 -9.36)" fill="#00596b" stroke="#00586b" stroke-width="0.3"/>
+                                        <circle id="Ellipse_15" data-name="Ellipse 15" cx="0.595" cy="0.595" r="0.595" transform="translate(0 40.45)" fill="#2d4356"/>
+                                        <path id="Path_29" data-name="Path 29" d="M7.488,135.5H6.6a.6.6,0,1,0,0,1.19h.893a.6.6,0,1,0,0-1.19Zm44.345,0H50.94a.6.6,0,0,0,0,1.19h.893a.6.6,0,0,0,0-1.19Z" transform="translate(-4.214 -95.05)" fill="#2d4356"/>
+                                        <circle id="Ellipse_16" data-name="Ellipse 16" cx="0.595" cy="0.595" r="0.595" transform="translate(48.81 40.45)" fill="#2d4356"/>
+                                        <path id="Path_30" data-name="Path 30" d="M55.393,93.006H52.682a2.369,2.369,0,0,0,.413-1.339V77.381A2.381,2.381,0,0,0,50.714,75H17.381A2.381,2.381,0,0,0,15,77.381V91.667a2.367,2.367,0,0,0,.442,1.378A.6.6,0,0,0,15,93.6a.641.641,0,0,0,.678.6H55.393a.6.6,0,1,0,0-1.19ZM16.19,77.381a1.192,1.192,0,0,1,1.19-1.19H50.714a1.192,1.192,0,0,1,1.19,1.19V91.667a1.192,1.192,0,0,1-1.19,1.19H17.381a1.192,1.192,0,0,1-1.19-1.19Z" transform="translate(-10.536 -52.556)" fill="#00596b" stroke="#00586b" stroke-width="0.3"/>
+                                        <path id="Path_31" data-name="Path 31" d="M34.143,97.5a.6.6,0,0,0-.6-.6H31.583a3.213,3.213,0,0,0-1.293-1.774,3.8,3.8,0,0,0-2.1-.568v-6.03a3.807,3.807,0,0,0,2.1-.568,3.213,3.213,0,0,0,1.293-1.774h1.964a.6.6,0,1,0,0-1.19H31.122a.6.6,0,0,0-.583.477A2.288,2.288,0,0,1,27.716,87.3a.595.595,0,0,0-.716.583v7.326a.6.6,0,0,0,.714.583,2.288,2.288,0,0,1,2.825,1.824.6.6,0,0,0,.583.477h2.425a.6.6,0,0,0,.6-.6ZM57.236,87.3a2.906,2.906,0,0,1-1.918-.331,2.227,2.227,0,0,1-.9-1.494A.6.6,0,0,0,53.83,85H51.4a.6.6,0,1,0,0,1.19h1.964a3.213,3.213,0,0,0,1.293,1.774,3.807,3.807,0,0,0,2.1.568v6.03a3.8,3.8,0,0,0-2.1.568A3.213,3.213,0,0,0,53.369,96.9H51.4a.6.6,0,0,0,0,1.19H53.83a.6.6,0,0,0,.583-.477,2.288,2.288,0,0,1,2.823-1.825.595.595,0,0,0,.716-.583V87.885a.595.595,0,0,0-.716-.583Z" transform="translate(-18.964 -59.58)" fill="#b1e8f3"/>
+                                        <path id="Path_32" data-name="Path 32" d="M7.75,60.2l.408-.537L7.9,59.513l-.262.6H7.63l-.266-.6-.263.15.4.524V60.2l-.632-.082v.292l.636-.081v.008l-.409.524.245.155.279-.606h.008l.258.6.271-.155-.412-.516v-.008l.649.077v-.292L7.75,60.2Z" transform="translate(-4.827 -41.679)" fill="#0bceb2"/>
+                                        <path id="Path_33" data-name="Path 33" d="M42.407,30.931l-.441.566.265.167.3-.655h.009l.279.65.293-.167-.446-.557v-.009l.7.084v-.316l-.7.093v-.009l.441-.58-.279-.158-.283.65h-.01l-.287-.645-.284.162.437.567v.009l-.683-.088v.316l.687-.088Z" transform="translate(-29.303 -20.977)" fill="#0bceb2"/>
+                                        <path id="Path_34" data-name="Path 34" d="M52.84,9.352l-.255.327.153.1.174-.378h.005l.161.375.169-.1-.257-.322V9.349l.4.049V9.215l-.4.054V9.263l.255-.335-.161-.091-.164.375h-.005l-.166-.373-.164.094.252.327v.005l-.394-.051V9.4l.4-.051Z" transform="translate(-36.835 -6.085)" fill="#0bceb2"/>
+                                        <path id="Path_35" data-name="Path 35" d="M119.228,43.883l-.434.557.26.165.3-.644h.009l.274.64.288-.164-.438-.548v-.009l.69.082v-.31l-.69.091v-.009l.434-.571-.274-.155-.279.639h-.01l-.283-.635-.279.16.429.557v.009l-.671-.087v.31l.676-.087Z" transform="translate(-83.269 -30.084)" fill="#0bceb2"/>
+                                        <path id="Path_36" data-name="Path 36" d="M152.173,30.96v-.31l-.69.091v-.009l.434-.571-.274-.155-.279.639h-.01l-.283-.635-.279.16.429.557v.009l-.671-.087v.31l.676-.087v.009l-.434.557.26.165.3-.644h.009l.274.64.288-.164-.438-.548v-.009Z" transform="translate(-105.745 -20.953)" fill="#0bceb2"/>
+                                        <path id="Path_37" data-name="Path 37" d="M95.472.867l-.343.441.206.13.235-.51h.007l.217.506.228-.13L95.674.871V.864l.546.065V.683l-.546.072V.748L96.018.3,95.8.174,95.58.68h-.007l-.224-.5L95.129.3l.34.441V.752L94.937.683V.929L95.472.86Z" transform="translate(-66.682)" fill="#0bceb2"/>
+                                        <path id="Path_38" data-name="Path 38" d="M68.879,144.5H66.407a.6.6,0,0,0,0,1.19h2.473a.6.6,0,0,0,0-1.19Zm-17.857,0H48.549a.6.6,0,0,0,0,1.19h2.473a.6.6,0,0,0,0-1.19Zm13.645,0h-11.9a.6.6,0,0,0,0,1.19h4.744v.6H55.143a.6.6,0,1,0,0,1.19h7.44a.6.6,0,0,0,0-1.19H59.923v-.6h4.744a.6.6,0,0,0,0-1.19Z" transform="translate(-33.714 -101.372)" fill="#b1e8f3"/>
+                                        <g id="qatar-riyal" transform="translate(18.502 -40.2)">
+                                            <g id="Group_10136" data-name="Group 10136" transform="translate(0 68.42)">
+                                            <path id="Path_1951" data-name="Path 1951" d="M226.144,104.719h0l.531,0h.071l.619,0a.1.1,0,0,0,.094-.088c.1-1.452-.013-2.065-.45-2.431a.1.1,0,0,0-.06-.022h-.011a.094.094,0,0,0-.065.038.716.716,0,0,0,.023.972,1.285,1.285,0,0,1,.176.517c.013.066.027.134.044.2l-.449,0h-.039l-.457,0c-.265,0-.483,0-.684.01h-.031c-.262,0-.376-.095-.4-.327-.025-.307-.054-.668-.082-1.012-.036-.449-.07-.871-.091-1.112a6.435,6.435,0,0,0-.295-1.172.094.094,0,0,0-.178,0c-.021.061-.05.125-.078.188a.96.96,0,0,0-.123.47c.034.345.1.692.158,1.033l0,.012c.039.213.078.433.11.65s.055.447.076.65c.026.257.053.522.1.785.066.4.292.628.635.635C225.542,104.717,225.814,104.719,226.144,104.719Z" transform="translate(-220.21 -99.659)" fill="#00596b"/>
+                                            <path id="Path_1952" data-name="Path 1952" d="M271.906,363.067l.375.427a.089.089,0,0,0,.06.032h.011a.094.094,0,0,0,.064-.026l.407-.38a.094.094,0,0,0,.007-.131l-.4-.46a.1.1,0,0,0-.071-.032.1.1,0,0,0-.064.025l-.411.379a.091.091,0,0,0-.026.045l-.372-.441a.1.1,0,0,0-.072-.034.094.094,0,0,0-.064.025l-.408.371a.094.094,0,0,0-.008.132l.406.472a.1.1,0,0,0,.069.033h0a.093.093,0,0,0,.064-.025l.4-.367A.1.1,0,0,0,271.906,363.067Z" transform="translate(-266.079 -357.228)" fill="#00596b"/>
+                                            <path id="Path_1953" data-name="Path 1953" d="M3.71,69.147a.587.587,0,0,0-.332-.4,1.3,1.3,0,0,1-.223-.188c-.039-.038-.079-.077-.122-.115a.094.094,0,0,0-.063-.024H2.954a.094.094,0,0,0-.066.046,1.373,1.373,0,0,0-.049,1.128l.022.092a16.711,16.711,0,0,1,.322,2.291l.027.283a1.326,1.326,0,0,1-.18.994,1.393,1.393,0,0,1-1,.375c-.089.008-.177.009-.25.009H1.6a1.177,1.177,0,0,1-.987-.368A.469.469,0,0,1,.5,72.933a2.651,2.651,0,0,1,.368-.915.216.216,0,0,0-.062-.3.221.221,0,0,0-.3.06,3.563,3.563,0,0,0-.475,1.149,1.164,1.164,0,0,0,.159.95,1.2,1.2,0,0,0,.861.492,4.854,4.854,0,0,0,.592.033c.178,0,.368-.008.581-.023a1.587,1.587,0,0,0,1.147-.5A1.791,1.791,0,0,0,3.7,72.513c-.047-.5-.106-1-.163-1.488l0-.029c-.041-.354-.084-.719-.122-1.079a.367.367,0,0,1,.045-.243A.665.665,0,0,0,3.71,69.147Z" transform="translate(0 -68.42)" fill="#00596b"/>
+                                            <path id="Path_1954" data-name="Path 1954" d="M332.335,229.993l-.056-.067c-.108-.14-.388-.5-.641-.784a.361.361,0,0,0-.5-.033.351.351,0,0,0-.033.5c.185.212.393.47.537.653.026.029.046.056.066.082s.035.047.056.072a.886.886,0,0,1,.129,1.114,2.453,2.453,0,0,1-1.992,1.313h0c-.058,0-.118,0-.177-.008a3.586,3.586,0,0,1-.442-.078l-.1-.02-.112-.024a.127.127,0,0,0-.145.081.1.1,0,0,0,.067.11c.159.045.328.106.476.16a3.121,3.121,0,0,0,1.03.249l.082,0c.722-.043,1.222-.558,1.746-1.311a1.486,1.486,0,0,0,.318-.974A1.607,1.607,0,0,0,332.335,229.993Z" transform="translate(-323.065 -226.162)" fill="#00596b"/>
+                                            </g>
+                                        </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <p class="pbtnHomeServices">الرصيد</p>
+                                </button>
+                            </div>
+                            <div class="colServiceHome" style="margin-right: 93px; margin-left: 93px;">
+                                <a href="Offices.html">
+                                <button class="btnServicesHome">
+                                <div class="backbtnHomeServices">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="44.112" viewBox="0 0 52 44.112">
+                                        <g id="XMLID_1396_" transform="translate(0.001 -38.833)">
+                                        <g id="XMLID_1465_" transform="translate(-0.001 38.833)">
+                                            <path id="XMLID_1523_" d="M52,68.728V56.539a3.248,3.248,0,0,0-4.473-3.01,4.254,4.254,0,0,0-1.368-2.965,4.266,4.266,0,1,0-5.664-.393,5.587,5.587,0,0,0-2,1.93L37.337,54h-3.01V52.612a6.884,6.884,0,0,0-4.894-6.581,4.243,4.243,0,0,0,.831-2.526V43.1a4.266,4.266,0,1,0-8.531,0V43.5a4.242,4.242,0,0,0,.831,2.526,6.884,6.884,0,0,0-4.894,6.581V54h-3.01L13.5,52.1a5.586,5.586,0,0,0-2-1.93,4.265,4.265,0,1,0-5.664.393,4.255,4.255,0,0,0-1.368,2.965A3.248,3.248,0,0,0,0,56.539V58.57a1.016,1.016,0,0,0,2.031,0V56.539a1.219,1.219,0,0,1,2.437,0v8.6a5.255,5.255,0,0,0,5.25,5.25h.436v2.044H5.735A3.71,3.71,0,0,1,2.03,68.728V66.695a1.016,1.016,0,0,0-2.031,0v2.033A5.745,5.745,0,0,0,4.72,74.373v6.541H1.455a1.016,1.016,0,1,0,0,2.031H13.607a3.457,3.457,0,0,0,3.453-3.453V67.811a5.05,5.05,0,0,0-1.018-3.045h4.472v14.93A3.247,3.247,0,0,0,26,82.052a3.247,3.247,0,0,0,5.484-2.357V75.836a1.016,1.016,0,1,0-2.031,0v3.859a1.219,1.219,0,1,1-2.437,0V64.765h2.437V67.71a1.016,1.016,0,0,0,2.031,0V64.765h4.472a5.05,5.05,0,0,0-1.018,3.045V79.492a3.457,3.457,0,0,0,3.453,3.453H50.543a1.016,1.016,0,1,0,0-2.031H47.278V74.373A5.745,5.745,0,0,0,52,68.728ZM48.749,55.32a1.22,1.22,0,0,1,1.219,1.219V68.728a3.709,3.709,0,0,1-3.705,3.705H41.844V70.389h.436a5.255,5.255,0,0,0,5.25-5.25v-8.6A1.22,1.22,0,0,1,48.749,55.32Zm-5.2-10.359A2.234,2.234,0,1,1,41.311,47.2,2.237,2.237,0,0,1,43.546,44.961Zm-5.64,11.07a1.016,1.016,0,0,0,.866-.486l1.458-2.384a3.578,3.578,0,0,1,3.034-1.7A2.237,2.237,0,0,1,45.5,53.695v8.227H41.03V59.575l1.535-2.426a1.016,1.016,0,1,0-1.717-1.086l-1.394,2.2H33.227a1.117,1.117,0,0,1,0-2.234h4.679ZM26.893,47.77l-.881,2.4-.881-2.4ZM23.765,43.1a2.234,2.234,0,1,1,4.469,0V43.5a2.234,2.234,0,1,1-4.469,0Zm-.711,4.907,2.005,5.465a1.016,1.016,0,0,0,1.907,0l2-5.457a4.849,4.849,0,0,1,3.328,4.6V54.14a3.147,3.147,0,0,0-2.012,4.125h-8.57A3.147,3.147,0,0,0,19.7,54.14V52.612A4.849,4.849,0,0,1,23.053,48.006Zm-9.828,7.539a1.015,1.015,0,0,0,.866.486h4.679a1.117,1.117,0,0,1,0,2.234H12.543l-1.394-2.2a1.016,1.016,0,1,0-1.717,1.086l1.536,2.426v2.346H6.5V53.695a2.237,2.237,0,0,1,2.234-2.234,3.578,3.578,0,0,1,3.034,1.7ZM8.452,44.961A2.234,2.234,0,1,1,6.218,47.2,2.237,2.237,0,0,1,8.452,44.961Zm-1.7,29.5h3.4v5.027a3.432,3.432,0,0,0,.308,1.422H6.751Zm8.278-6.654V79.492a1.422,1.422,0,1,1-2.844,0V69.374a1.016,1.016,0,0,0-1.016-1.016H9.717A3.222,3.222,0,0,1,6.5,65.14V63.953h4.489a1.016,1.016,0,0,0,1,.812A3.049,3.049,0,0,1,15.029,67.811Zm9.955,11.884a1.219,1.219,0,1,1-2.437,0V64.765h2.437ZM13,62.734V60.3H39v2.438Zm23.97,5.076a3.049,3.049,0,0,1,3.045-3.045,1.016,1.016,0,0,0,1-.812H45.5V65.14a3.222,3.222,0,0,1-3.218,3.218H40.829a1.016,1.016,0,0,0-1.016,1.016V79.492a1.422,1.422,0,0,1-2.844,0V67.811Zm4.567,13.1a3.432,3.432,0,0,0,.308-1.422V74.465h3.4v6.449Z" transform="translate(0.001 -38.833)" fill="#00586b"/>
+                                            <path id="XMLID_1625_" d="M291.016,353.17a1.016,1.016,0,1,0,.718.3A1.019,1.019,0,0,0,291.016,353.17Z" transform="translate(-260.547 -321.245)" fill="#00586b"/>
+                                            <path id="XMLID_1633_" d="M1.016,265.2A1.015,1.015,0,1,0,0,264.186,1.016,1.016,0,0,0,1.016,265.2Z" transform="translate(0 -240.386)" fill="#00586b"/>
+                                        </g>
+                                        </g>
+                                    </svg>
+                                    
+                                </div>
+                                <p class="pbtnHomeServices">المكاتب</p>
+                                </button>
+                            </a>
+                            </div>
+                            <div class="colServiceHome">
+                                <button class="btnServicesHome btnServicesHomeMsg">
+                                <div class="backbtnHomeServices">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44.843" height="42.923" viewBox="0 0 44.843 42.923">
+                                        <path id="Path_18" data-name="Path 18" d="M19.137,3h8.569A16.875,16.875,0,0,1,44.843,19.6,16.875,16.875,0,0,1,27.706,36.2v7.263C17,39.313,2,33.088,2,19.6A16.875,16.875,0,0,1,19.137,3Zm4.284,29.05h4.284A12.656,12.656,0,0,0,40.559,19.6,12.656,12.656,0,0,0,27.706,7.15H19.137A12.656,12.656,0,0,0,6.284,19.6c0,7.491,5.274,12.38,17.137,17.6Z" transform="translate(-1 -2)" fill="#00596b" stroke="#ebf5f7" stroke-width="2"/>
+                                      </svg>                                                                     
+                                </div>
+                                <p class="pbtnHomeServices">الرسائل</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divContentServicesMsgs">
+                        <div class="headMsgBoxHome">
+                            <i class="fas fa-chevron-right ArrowBackHomMsg"></i>
+                            <p class="pServicesHomeMsg">الرسائل</p>
+                        </div>
+                        <div class="divCenterNumMsgHome">
+                            <p class="pNewMsgHome">الرسائل الجديدة</p>
+                            <p class="pNumMsgHome">0</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12 colLblmsg">
+                                <div>
+                                    <label class="lblMsgHome">الرسائل الواردة</label>
+                                    <label class="lblNumHome">0</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 colLblmsg">
+                                <div>
+                                    <label class="lblMsgHome">الرسائل الصادرة</label>
+                                    <label class="lblNumHome">0</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divContentServicesBalance">
+                        <div class="headMsgBoxHome">
+                            <i class="fas fa-chevron-right ArrowBackBalanceHome"></i>
+                            <p class="pServicesHomeMsg">الرصيد</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <p class="pAllBalanceHome">الرصيد الكلي</p>
+                                <p class="numAllBalanceHome">$0.00</p>
+                                <div class="divLblMsgHome">
+                                    <label class="lblMsgHome">الرصيد المتاح</label>
+                                    <label class="lblNumHome">$0.00</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <p class="pAllBalanceHome">الرصيد القابل للسحب</p>
+                                <p class="numAllBalanceHome pNumBlueBalanceHome">$0.00</p>
+                                <div class="divLblMsgHome">
+                                    <label class="lblMsgHome">الرصيد المعلق</label>
+                                    <label class="lblNumHome">$0.00</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;" class="boxMediaHome">
+            <div class="colBoxesHome" style="width: 316px;">
+                <div class="boxesHome boxoffersHome">
+                    <p class="pboxoffersHome">العروض الخاصة بك</p>
+                    <a href="Offers.html">
+                    <p class="numBoxOfferHome">14</p>
+                    </a>
+                </div>
+            </div>
+            <div class="colBoxesHome" style="width: 460px;">
+                <div class="boxesHome typeOffersHome">
+                    <p class="pServicesHome" style="padding-right: 0px;">عروضي</p>
+                    <div class="row SectypeOffersHome" >
+                        <div class="col-lg-6 col-12 colTypeOfferHome">
+                            <div>
+                                <p class="pTypeOffer">بإنتظار الموافقة</p>
+                                <p class="numTypeOffer">2</p>
+                            </div>
+                            <div>
+                                <p class="pTypeOffer">مكتمل</p>
+                                <p class="numTypeOffer">7</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 colTypeOfferHome">
+                            <div>
+                                <p class="pTypeOffer">قيد التنفيذ</p>
+                                <p class="numTypeOffer">1</p>
+                            </div>
+                            <div>
+                                <p class="pTypeOffer">مستبعدة</p>
+                                <p class="numTypeOffer">9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colBoxesHome" style="width: 316px;">
+                <div class="divMyWorkHome" style="width: 316px;">
+                    <p class="pMyWorkHome">أعمالي</p>
+                    <a href="Portfolio.html">
+                    <p class="numMyWorkHome">6</p>
+                </a>
+                </div>
+                <div class="divAddWorkHome" style="width: 316px;">
+                    <p class="pAddWorkHome">إضافة عمل جديد</p>
+                    <a href="AddPortfolio.html">
+                    <div class="backAddWorkHome">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.96" height="25.96" viewBox="0 0 25.96 25.96">
+                            <path id="Plus" d="M10.4,23.4V14.56H2.08a2.08,2.08,0,0,1,0-4.161H10.4V1.56C10.4.7,11.331,0,12.48,0s2.08.7,2.08,1.56V10.4h8.32a2.08,2.08,0,0,1,0,4.161H14.56V23.4c0,.861-.932,1.56-2.08,1.56S10.4,24.261,10.4,23.4Z" transform="translate(0.5 0.5)" fill="#00586b" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+                          </svg>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;" class="boxMediaHome">
+            <div class=" colBoxesHome" style="width:364px"> 
+                <div class="divColCalenderHome">
+                    <p class="pServicesHome" style="padding-right: 15px;" >مهامي</p>
+                    <div class="divcontentCalenderHome">
+                        <div class="container">
+                            <!-- calendar-->
+                            <div data-role="calendar" class="compact"  data-picker-mode="true" data-multi-select="true"></div>    
+                            <!-- calendar-->
+                        </div>
+                    </div>
+                    <p class="pServicesHome">قائمة المهام</p>
+                    <div class="divListTast">
+                        <div>
+                            <div class="round inputRadioTask">
+                                <input type="checkbox" id="checkbox" class="checkRemember">
+                                <label for="checkbox"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <p>الرد على العميل الأول في استشارة</p>
+                            <label>اليوم</label>
+                        </div>
+                    </div>
+                    <div class="divListTast">
+                        <div>
+                            <div class="round inputRadioTask">
+                                <input type="checkbox" id="checkbox" checked class="checkRemember">
+                                <label for="checkbox"></label>
+                            </div>
+                          
+                        </div>
+                        <div>
+                            <p class="doneTask">عمل دراسة جدوى</p>
+                            <label>اليوم</label>
+                        </div>
+                    </div>
+                    <div class="divListTast">
+                        <div>
+                            <div class="round inputRadioTask">
+                                <input type="checkbox" id="checkbox" class="checkRemember">
+                                <label for="checkbox"></label>
+                            </div>
+                            <!-- <input class="inputRadioTask" type="radio"> -->
+                        </div>
+                        <div>
+                            <p>إتمام المشروع الثاني </p>
+                            <label>غدا</label>
+                        </div>
+                    </div>
+                    <div class="divListTast">
+                        <div>
+                            <div class="round inputRadioTask">
+                                <input type="checkbox" id="checkbox" class="checkRemember">
+                                <label for="checkbox"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <p>استشارة محاميين في المكتب </p>
+                            <label>غدا</label>
+                        </div>
+                    </div>
+                    <div class="divListTast">
+                        <div>
+                            <div class="round inputRadioTask">
+                                <input type="checkbox" id="checkbox" class="checkRemember">
+                                <label for="checkbox"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <p>استشارة محاميين في المكتب </p>
+                            <label>غدا</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" colBoxesHome" style="width:748px"> 
+                <div class="divLastOffers">
+                    <p class="pServicesHome" style="padding-right: 15px;">آخر العروض المضافة</p>
+                    <div class="divOffersHome">
+                        <a href="Offers.html">                    
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="divOffersHome">
+                       <a href="Offers.html">
+                        <p class="OrderTitle">هذا النص هو مثال لنص يمكن أن يستبدل في المساحة</p>
+                        </a>
+                        <div class="divIcons row">
+                            <div class="col-lg-3 col-12">
+                                <a href="Entrepreneur.html">
+                                <i class="fas fa-user iconOrders"></i>
+                                <label class="lblOrders">اسم الناشر</label>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="far fa-clock iconOrders"></i>
+                                <label class="lblOrders">12/1/2021</label>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <i class="fas fa-tag iconOrders"></i>
+                                <label class="lblOrders">عدد العروض</label>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end Content -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="row rowLinksFooter">
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">عنا</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">خدماتنا</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">الأسئلة الشائعة</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">لماذا نحن</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">شروط الاستخدام</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">بيان الخصوصية</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 divPFooter">
+                    <div>
+                        <a href="#">
+                            <p class="pFooter">شركاء النجاح</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">كلمة الرئيس التنفيذي</p>
+                        </a>
+                        <a href="#">
+                            <p class="pFooter">تواصل معنا</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrTopFooter">
+            <div class="row">
+                <div class="col-md-6 co-12">
+                    <div class="row divFollowUs">
+                        <div class="col-lg-1 col-md-2 col-12 colFollow">
+                            <P class="pFooter">تابعنا</P>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="footerSocialIcons row">
+                                <div class=" col-lg-2 col-md-4 col-3 colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="13.234" height="26" viewBox="0 0 13.234 26">
+                                                    <g id="facebook-logo" transform="translate(-123.395)">
+                                                    <g id="Group_157" data-name="Group 157" transform="translate(123.395 0)">
+                                                        <path id="Path_86" data-name="Path 86" d="M136.629,9.287h-4.761V6.966s-.267-2.207,1.276-2.207h3.136V0h-5.34s-4.469-.019-4.469,4.469c0,.964,0,2.719-.011,4.818h-3.066v3.832h3.058C126.435,19.21,126.414,26,126.414,26h5.454V13.118h3.6Z" transform="translate(-123.395 0)" fill="#00586b"/>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-facebook-f"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-3 colTwitter colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19.5" viewBox="0 0 24 19.5">
+                                                    <path id="twitter_1_" data-name="twitter (1)" d="M21.534,7.113A9.822,9.822,0,0,0,24,4.559h0a10.276,10.276,0,0,1-2.835.777A4.894,4.894,0,0,0,23.33,2.616a9.845,9.845,0,0,1-3.12,1.191A4.92,4.92,0,0,0,11.7,7.171a5.066,5.066,0,0,0,.114,1.122A13.93,13.93,0,0,1,1.671,3.146,4.92,4.92,0,0,0,3.183,9.722,4.863,4.863,0,0,1,.96,9.116V9.17A4.943,4.943,0,0,0,4.9,14.005a4.893,4.893,0,0,1-1.29.162,4.343,4.343,0,0,1-.931-.084,4.969,4.969,0,0,0,4.6,3.428,9.89,9.89,0,0,1-6.1,2.1A9.305,9.305,0,0,1,0,19.542,13.856,13.856,0,0,0,7.548,21.75,13.908,13.908,0,0,0,21.534,7.113Z" transform="translate(0 -2.25)" fill="#00586b"/>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-twitter"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-3 colFacebook">
+                                        <a href="#">
+                                            <div class="backSocialIcons">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24.001" viewBox="0 0 24 24.001">
+                                                    <g id="instagram" transform="translate(-0.005)">
+                                                    <g id="Group_159" data-name="Group 159" transform="translate(0.005)">
+                                                        <g id="Group_158" data-name="Group 158" transform="translate(0)">
+                                                        <path id="Path_87" data-name="Path 87" d="M18,0H6A6.018,6.018,0,0,0,0,6V18a6.019,6.019,0,0,0,6,6h12a6.019,6.019,0,0,0,6-6V6A6.018,6.018,0,0,0,18,0Zm4,18a4,4,0,0,1-4,4h-12a4,4,0,0,1-4-4V6a4,4,0,0,1,4-4h12a4,4,0,0,1,4,4V18Z" transform="translate(-0.005)" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_161" data-name="Group 161" transform="translate(17.006 4)">
+                                                        <g id="Group_160" data-name="Group 160">
+                                                        <circle id="Ellipse_21" data-name="Ellipse 21" cx="1.5" cy="1.5" r="1.5" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    <g id="Group_163" data-name="Group 163" transform="translate(6.005 6)">
+                                                        <g id="Group_162" data-name="Group 162">
+                                                        <path id="Path_88" data-name="Path 88" d="M108.4,102.4a6,6,0,1,0,6,6A6,6,0,0,0,108.4,102.4Zm0,10a4,4,0,1,1,4-4A4,4,0,0,1,108.4,112.4Z" transform="translate(-102.405 -102.4)" fill="#00586b"/>
+                                                        </g>
+                                                    </g>
+                                                    </g>
+                                                </svg>
+                                                
+                                                <!-- <i class="fab fa-instagram"></i> -->
+                                            </div>
+                                        </a>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 co-12">
+                    <div class="row divFollowUs ourApps">
+                        <div class="col-lg-2 col-md-2 col-12 colApps">
+                            <P class="pFooter">تطبيقاتنا</P>
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <div class="footerSocialIcons footerSocialIconsApps row">
+                                <div class="col-lg-2 col-md-4 col-3  colFacebook">
+                                    <a href="#">
+                                        <div class="backSocialIcons">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24.384" viewBox="0 0 20 24.384">
+                                                <g id="apple" transform="translate(-46.022)">
+                                                <path id="Path_93" data-name="Path 93" d="M52.653,136.724c-3.629-.021-6.631-7.429-6.631-11.2,0-6.163,4.623-7.512,6.4-7.512a7.37,7.37,0,0,1,2.417.594,5.4,5.4,0,0,0,1.38.4,4.294,4.294,0,0,0,.99-.321,7.934,7.934,0,0,1,2.984-.721H60.2a6.116,6.116,0,0,1,5.118,2.585l.373.561-.537.405a4.52,4.52,0,0,0-2.168,3.727,4.207,4.207,0,0,0,2.347,3.889c.336.2.684.411.684.867,0,.3-2.377,6.694-5.83,6.694a4.689,4.689,0,0,1-1.969-.478,3.992,3.992,0,0,0-1.752-.422,4.507,4.507,0,0,0-1.388.375,6.8,6.8,0,0,1-2.407.562Z" transform="translate(0 -112.34)" fill="#00586b"/>
+                                                <path id="Path_94" data-name="Path 94" d="M259.735,0c.09,3.242-2.229,5.491-4.545,5.35C254.809,2.763,257.506,0,259.735,0Z" transform="translate(-199.173)" fill="#00586b"/>
+                                                </g>
+                                            </svg>
+                                            
+                                            <!-- <i class="fab fa-apple"></i> -->
+                                        </div>
+                                    </a>  
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-3  colFacebook">
+                                    <a href="#">
+                                        <div class="backSocialIcons">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23.447" viewBox="0 0 20 23.447">
+                                                <g id="android-logo_1_" data-name="android-logo (1)" transform="translate(-37.134 0)">
+                                                <g id="Group_165" data-name="Group 165" transform="translate(37.134 0)">
+                                                    <g id="Group_164" data-name="Group 164" transform="translate(0 0)">
+                                                    <path id="Path_89" data-name="Path 89" d="M38.592,164.715h-.06a1.4,1.4,0,0,0-1.4,1.4V172.2a1.4,1.4,0,0,0,1.4,1.4h.061a1.4,1.4,0,0,0,1.4-1.4v-6.086A1.4,1.4,0,0,0,38.592,164.715Z" transform="translate(-37.134 -157.069)" fill="#00586b"/>
+                                                    <path id="Path_90" data-name="Path 90" d="M113.085,179.134a1.286,1.286,0,0,0,1.285,1.283h1.373V183.7a1.4,1.4,0,0,0,1.4,1.4h.06a1.4,1.4,0,0,0,1.4-1.4v-3.287h1.918V183.7a1.4,1.4,0,0,0,1.4,1.4h.059a1.4,1.4,0,0,0,1.4-1.4v-3.287h1.374a1.286,1.286,0,0,0,1.284-1.283v-9.609H113.085Z" transform="translate(-109.56 -161.656)" fill="#00586b"/>
+                                                    <path id="Path_91" data-name="Path 91" d="M121.9,2.042,122.99.359a.232.232,0,0,0-.068-.32.23.23,0,0,0-.32.068l-1.13,1.741a7.474,7.474,0,0,0-5.592,0L114.75.106a.232.232,0,0,0-.391.252l1.091,1.683a5.52,5.52,0,0,0-3.294,4.866c0,.128.008.254.019.379h13c.011-.125.018-.251.018-.379A5.522,5.522,0,0,0,121.9,2.042Zm-6.238,3.014a.624.624,0,1,1,.626-.625A.625.625,0,0,1,115.661,5.056Zm6.027,0a.624.624,0,1,1,.625-.625A.625.625,0,0,1,121.688,5.056Z" transform="translate(-108.675 0)" fill="#00586b"/>
+                                                    <path id="Path_92" data-name="Path 92" d="M407.927,164.715h-.058a1.4,1.4,0,0,0-1.4,1.4V172.2a1.4,1.4,0,0,0,1.4,1.4h.059a1.4,1.4,0,0,0,1.4-1.4v-6.086A1.4,1.4,0,0,0,407.927,164.715Z" transform="translate(-389.326 -157.069)" fill="#00586b"/>
+                                                    </g>
+                                                </g>
+                                                </g>
+                                            </svg>
+                                            
+                                            <!-- <i class="fab fa-android"></i> -->
+                                        </div>
+                                    </a>  
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrBottomFooter">
+            <div>
+                <p class="copyright">Ⓒ2021 بوابة الاستشارات الإلكترونية.جميع الحقوق محفوظة </p>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+
+    <!-- start buttonTop-->
+    <button onclick="topFunction()" id="Top">
+    <i class="fas fa-chevron-up"></i>
+    </button>
+    <script>
+    //Get the button
+    var mybutton = document.getElementById("Top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <script>
+        var app = {
+	settings: {
+		container: $('.calendar'),
+		calendar: $('.front'),
+		days: $('.weeks span'),
+		form: $('.back'),
+		input: $('.back input'),
+		buttons: $('.back button')
+	},
+
+	init: function() {
+		instance = this;
+		settings = this.settings;
+		this.bindUIActions();
+	},
+
+	swap: function(currentSide, desiredSide) {
+		settings.container.toggleClass('flip');
+
+    currentSide.fadeOut(900);
+    currentSide.hide();
+    desiredSide.show();
+
+	},
+
+	bindUIActions: function() {
+		settings.days.on('click', function(){
+			instance.swap(settings.calendar, settings.form);
+			settings.input.focus();
+		});
+
+		settings.buttons.on('click', function(){
+			instance.swap(settings.form, settings.calendar);
+		});
+	}
+}
+
+app.init();
+    </script>
+    <!-- end buttonTop-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- calendar -->
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    <script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+    <!--End calendar -->
+    <script src="js/function.js"></script>
+</body>
+</html>

@@ -423,7 +423,7 @@
         <div class="divMyWorkHome" style="width: 316px">
           <p class="pMyWorkHome">أعمالي</p>
           <router-link :to="{ name: 'lawyer-portfolio' }">
-            <p class="numMyWorkHome">6</p>
+            <p class="numMyWorkHome"> {{workNumberNet }}</p>
           </router-link>
         </div>
         <div class="divAddWorkHome" style="width: 316px">
@@ -582,6 +582,8 @@ export default {
   data() {
     return {
       last_added_requests: [],
+       workNumber:0,
+       workNumberNet:0,
     };
   },
   computed: {
@@ -606,6 +608,13 @@ export default {
   },
   mounted() {
     this.getLastAdded();
+      this.$http
+        .get("lawyer/auth/lawyer/galleries")
+        .then((res) => {
+          this.workNumber = res.data.data;
+          this.workNumberNet = Object.keys( res.data.data.Gallery).length;
+        });
+  
   },
 };
 </script>

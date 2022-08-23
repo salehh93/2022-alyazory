@@ -102,7 +102,7 @@
                   </p>
                 </a>
                 <p class="pWorksProfile">
-                  {{ req.description }}
+                  {{ req.description  | truncate(180, '...') }}
                 </p>
                 <div class="divIcons row">
                   <div class="col-lg-2 col-12">
@@ -119,7 +119,7 @@
                   </div>
                   <div class="col-lg-3 col-12">
                     <i class="far fa-calendar-alt iconOrders ml-2"></i>
-                    <label class="lblOrders">مدة التنفيذ 3 أيام </label>
+                    <label class="lblOrders">مدة التنفيذ {{ req.delivery_time_form }} أيام </label>
                   </div>
                 </div>
                 <hr v-show="i !== open_requests.length - 1">

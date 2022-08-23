@@ -69,9 +69,7 @@ export default {
 </script>
 <style lang="scss">
 #app {
-  font-family: 'Arial Regular', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol";
+    font-family: Almarai;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -96,5 +94,6 @@ html,
 body {
   margin: 0px !important;
   padding: 0px !important;
+      font-family: Almarai;
 }
 </style>

@@ -104,13 +104,13 @@
               <div>
                 <p class="NameProfile mb-1">{{ $store.state.user.name }}</p>
                 <div class="online mr-2"></div>
-                <p class="pPositionProfile">
-                  مكتب محاماة نظامي قانوني- قانون سعودي
+                <p class="pPositionProfile" v-if="$store.state.user.jobs[0].job_title">
+                {{$store.state.user.jobs[0].job_title}}
                 </p>
                 <div class="divGps">
                   <i class="fas fa-map-marker-alt gpsIcon"></i>
-                  <p class="pLocationProfile">
-                    المملكة العربية السعودية - جدة - 1:00 pm التوقيت المحلي
+                  <p class="pLocationProfile" v-if="$store.state.user.country">
+                    {{$store.state.user.country}}
                   </p>
                 </div>
                 <div>
@@ -136,7 +136,7 @@
                 <a href="#"> عرض كما يظهر للعام </a>
               </button>
               <button class="btnProfile btnSetProfile">
-                <a href="Edit_Profile.html"> إعدادات الملف الشخصي </a>
+                <router-link to="/edit-lawyer-profile"> إعدادات الملف الشخصي </router-link>
               </button>
             </div>
           </div>
@@ -182,14 +182,15 @@
               >
                 <button
                   class="btnTypeLawProfile nav-link"
+                  :class="i== 0 ? 'active':''"
                   id="v-pills-regular-tab"
                   data-bs-toggle="pill"
-                  :data-bs-target="`#${job.job_title}`"
+                  :data-bs-target="`#bio${job.id}`"
                   type="button"
                   role="tab"
                   :aria-controls="job.job_title"
                   aria-selected="false"
-                  v-for="job in $store.state.user.jobs"
+                  v-for="(job , i) in $store.state.user.jobs"
                   :key="job.id"
                 >
                   <p>{{ job.job_title }}</p>
@@ -265,9 +266,19 @@
                 class="divPLang"
                 v-for="(lang, i) in $store.state.user.language"
                 :key="lang.id"
+                v-show="lang.name == 0 || lang.name ==1"
               >
-                <p class="pLangProfile">{{ lang.name }}:</p>
-                <p class="pLevelLang">{{ lang.degree }}</p>
+                <p class="pLangProfile" v-if="lang.name == 0 & lang.name !=1">العربية:
+                <span v-if="lang.degree == 'Intermediate'">متوسطة</span>
+                <span v-if="lang.degree == 'junior'">مبتدئ</span>
+                <span v-if="lang.degree == 'professional'">محترف</span>
+                </p>
+                <p class="pLangProfile" v-if="lang.name == 1  & lang.name !=0">انجليزية:
+                  <span v-if="lang.degree == 'Intermediate'">متوسطة</span>
+                <span v-if="lang.degree == 'junior'">مبتدئ</span>
+                <span v-if="lang.degree == 'professional'">محترف</span>
+                </p>
+                
                 <div
                   class="backIconShowProfile hideIconEdit"
                   data-target="#EditLangmodOffice"
@@ -401,8 +412,8 @@
           <div class="col-lg-8 col-md-7 col-12 LeftColProfile">
             <div class="tab-content" id="v-pills-tabContent">
               <div
-                class="tab-pane fade"
-                :id="job.job_title"
+                class="tab-pane fade  " :class="i == 0 ? 'active show' : ''"
+                :id="'bio'+job.id"
                 role="tabpanel"
                 aria-labelledby="v-pills-regular-tab"
                 v-for="(job, i) in $store.state.user.jobs"
@@ -499,15 +510,19 @@
                   </div>
                 </div>
                 <div class="divBio">
-                  <p>
+                  <p :style=" 'height: '+showtext+'; overflow: hidden;'">
                     {{ job.bio }}
                   </p>
-                  <button class="aBio" onclick="functionMore()" id="btnMoreBio">
-                    المزيد
+                  <button class="aBio" @click="showtext = 'auto'"  id="btnMoreBio">
+                    {{showtext == 'auto' ? '':'المزيد' }}
                   </button>
                 </div>
               </div>
             </div>
+
+
+
+
             <div class="divWorksProfile">
               <p class="TitleWorksProfile">سجل الأعمال</p>
               <ul class="nav nav-tabs ulProfile" id="myTab" role="tablist">
@@ -543,7 +558,8 @@
                   role="tabpanel"
                   aria-labelledby="home-tab"
                 >
-                  <div v-for="req in complete_requests" :key="req.id">
+                 <div v-if="complete_requests">
+ <div v-for="req in complete_requests" :key="req.id">
                     <a href="OrderComplete.html">
                       <p class="pTitleWorksProfile">
                         {{ req.title }}
@@ -580,7 +596,11 @@
                       </div>
                     </div>
                   </div>
-                  <hr class="hrProfile" />
+                 </div>
+                 <div v-else>
+                  لا يوجد اعمال مكتملة
+                 </div>
+                  
                 </div>
                 <div
                   class="tab-pane fade"
@@ -588,8 +608,9 @@
                   role="tabpanel"
                   aria-labelledby="profile-tab"
                 >
-                  <div v-for="req in underway_requests" :key="req.id">
-                    <a href="OrderChat.html">
+                 <div v-if="underway_requests">
+                   <div v-for="req in underway_requests" :key="req.id">
+                    <a href="">
                       <p class="pTitleWorksProfile">
                         {{ req.title }}
                       </p>
@@ -625,6 +646,10 @@
                       </div>
                     </div>
                   </div>
+                 </div>
+                 <div v-else>
+                  لا يوجد اعمال قيد التنفيذ
+                 </div>
                 </div>
                 <div class="divLinkRate">
                   <a href="#" class="aRatesProfile">
@@ -651,7 +676,7 @@
                     height="14.718"
                     viewBox="0 0 14 14.718"
                   >
-                    <g id="delete" transform="translate(-2.25 -1.75)">
+                    <g id="delete"  transform="translate(-2.25 -1.75)">
                       <path
                         id="Path_1916"
                         data-name="Path 1916"
@@ -776,7 +801,7 @@
                           </svg>
                         </div>
 
-                        <div
+                        <div @click="deleteItem(work.id)"
                           class="backIconShowProfile"
                           style="width: 30px; height: 30px"
                         >
@@ -878,6 +903,9 @@
             <div class="secSkillsProfile">
               <div class="flexHeadSHow">
                 <p class="pShowProfile">المهارات</p>
+                <div  class="backIconShowProfile hideIconEdit"   data-toggle="modal"
+                      data-target="#editSkillsmodOffice"
+                      @click="editExp()"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="13.985" viewBox="0 0 14 13.985"><g id="pencil_2_" data-name="pencil (2)" transform="translate(0 -0.246)"><path id="Path_1910" data-name="Path 1910" d="M8.645,82.473l-7.7,7.7a.307.307,0,0,0-.08.141L.008,93.744a.3.3,0,0,0,.294.377.3.3,0,0,0,.073-.009L3.8,93.258a.3.3,0,0,0,.141-.08l7.7-7.7Zm0,0" transform="translate(0 -79.889)" fill="#848484"></path><path id="Path_1911" data-name="Path 1911" d="M338.38,1.534l-.857-.857a1.553,1.553,0,0,0-2.144,0l-1.05,1.05,3,3,1.05-1.05a1.517,1.517,0,0,0,0-2.144Zm0,0" transform="translate(-324.825 0)" fill="#848484"></path></g></svg></div>
               </div>
               <div
                 class="rowSkillsProfile"
@@ -889,10 +917,11 @@
                 <div
                   v-for="(skill, i) in $store.state.user.experience"
                   :key="skill.id"
+                  :index="i"
                   class="row"
                 >
                   <button class="backSkills mr-4">
-                    <p class="mb-0">{{ skill.skill }}</p>
+                    <p class="mb-0" v-for="name in skill.skill" :key="name">{{ name.name }}</p>
                     <!-- edit skill button -->
                     <div
                       class="backIconShowProfile ml-0 mr-2 hideIconEdit"
@@ -933,11 +962,155 @@
                 </div>
               </div>
             </div>
+
+
+
+<div class="secPracticalSkills">
+                        <div class="flexHeadSHow HeadSkillsProfile">
+                            <p class="pShowProfile"> الخبرات العملية</p>
+                            <div class="backIconShowProfile hideIconEdit" data-toggle="modal" data-target="#addTrainingWorkMod">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                           
+                        </div>
+
+                        <div class="item-skill" v-for="(exper , i) in $store.state.user.employe" :key="exper.id" :index="i">
+                      <div class="flexHeadSHow ">
+                            <p class="pShowProfile">{{exper.workplace}}</p>
+                            <div class="backIconShowProfile hideIconEdit" data-toggle="modal" data-target="#editTrainingWorkMod">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13.985" viewBox="0 0 14 13.985">
+                                    <g id="pencil_2_" data-name="pencil (2)" transform="translate(0 -0.246)">
+                                      <path id="Path_1910" data-name="Path 1910" d="M8.645,82.473l-7.7,7.7a.307.307,0,0,0-.08.141L.008,93.744a.3.3,0,0,0,.294.377.3.3,0,0,0,.073-.009L3.8,93.258a.3.3,0,0,0,.141-.08l7.7-7.7Zm0,0" transform="translate(0 -79.889)" fill="#848484"></path>
+                                      <path id="Path_1911" data-name="Path 1911" d="M338.38,1.534l-.857-.857a1.553,1.553,0,0,0-2.144,0l-1.05,1.05,3,3,1.05-1.05a1.517,1.517,0,0,0,0-2.144Zm0,0" transform="translate(-324.825 0)" fill="#848484"></path>
+                                    </g>
+                                  </svg>
+                            </div>
+                        
+                            <div class="backIconShowProfile hideIconEdit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14.718" viewBox="0 0 14 14.718">
+                                    <g id="delete" transform="translate(-2.25 -1.75)">
+                                      <path id="Path_1916" data-name="Path 1916" d="M12.571,17.314H7.057A2.19,2.19,0,0,1,4.9,15.261L4.25,5.324a.546.546,0,0,1,.144-.395.553.553,0,0,1,.395-.179H14.84a.538.538,0,0,1,.538.574l-.625,9.936a2.19,2.19,0,0,1-2.183,2.053ZM5.391,5.827,5.944,15.2a1.113,1.113,0,0,0,1.113,1.041h5.514A1.12,1.12,0,0,0,13.684,15.2l.582-9.333Z" transform="translate(-0.564 -0.846)" fill="#848484"></path>
+                                      <path id="Path_1917" data-name="Path 1917" d="M15.712,5.827H2.788a.538.538,0,1,1,0-1.077H15.712a.538.538,0,1,1,0,1.077Z" transform="translate(0 -0.846)" fill="#848484"></path>
+                                      <path id="Path_1918" data-name="Path 1918" d="M13.1,4.981H8.788a.546.546,0,0,1-.538-.538V3.15a1.436,1.436,0,0,1,1.4-1.4h2.585a1.436,1.436,0,0,1,1.4,1.436V4.442a.546.546,0,0,1-.538.538ZM9.327,3.9h3.231V3.186a.323.323,0,0,0-.323-.323H9.65a.323.323,0,0,0-.323.323Z" transform="translate(-1.692)" fill="#848484"></path>
+                                      <path id="Path_1919" data-name="Path 1919" d="M14.788,15.571a.546.546,0,0,1-.538-.538V9.288a.538.538,0,1,1,1.077,0v5.744A.546.546,0,0,1,14.788,15.571Z" transform="translate(-3.385 -1.974)" fill="#848484"></path>
+                                      <path id="Path_1920" data-name="Path 1920" d="M8.788,15.571a.546.546,0,0,1-.538-.538V9.288a.538.538,0,0,1,1.077,0v5.744A.546.546,0,0,1,8.788,15.571Z" transform="translate(-1.692 -1.974)" fill="#848484"></path>
+                                      <path id="Path_1921" data-name="Path 1921" d="M11.788,15.571a.546.546,0,0,1-.538-.538V9.288a.538.538,0,1,1,1.077,0v5.744A.546.546,0,0,1,11.788,15.571Z" transform="translate(-2.538 -1.974)" fill="#848484"></path>
+                                    </g>
+                                  </svg>
+                            </div>
+                        </div>
+                        <div class="divPSkills">
+                            <p>{{exper.description}}</p>
+                        </div>
+
+                        </div>
+
+                      
+
+
+
+                    </div>
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
     </div>
     <!-- modals -->
+
+     <div class="modal fade " id="addTrainingWorkMod" tabindex="-1" role="dialog" aria-labelledby="addTrainingWorkMod" >
+                                <div class="modal-dialog modDialogEditName" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header modHead">
+                                    <h5 class="modal-title titleModPort" id="exampleModalLabel">إضافة خبرة عملية</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body" style="padding: 28px; padding-left: 28px;">
+                                        <div class="divtxtsAddWork">
+                                            <p class="pAddWorksPort text-start">مكان العمل </p>
+                                            <input type="text" placeholder="اكتب اسم المكان الذي عملت به" class="txtUserNameSettings">
+                                        </div>
+                                        <div class="divtxtsAddWork">
+                                            <p class="pAddWorksPort">وصف العمل </p>
+                                                <!-- وصف بسيط عن طبيعة العمل  -->
+
+                                            <textarea class="txtUserNameSettings textareaSettings txtDescAddWork" cols="30" rows="5">                                            </textarea>
+                                        </div>
+                                        <div class="row ">
+                                          <div class="col-lg-6">
+                                              <p class="pAddWorksPort text-start">من</p>
+                                               <input type="date" placeholder="18-9-2000" class="txtUserNameSettings" />
+
+                                          </div>
+                                          <div class="col-lg-6">
+                                              <p class="pAddWorksPort text-start">إلى</p>
+                                               <input type="date" placeholder="18-9-2004" class=" txtUserNameSettings" />
+
+                                          </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer footmodEditName">
+                                            <button class="btnBackSettings btnBackSettingsModName" data-dismiss="modal">إلغاء</button>
+                                            <button class="btnNextSettings btnNextSettingsModName">حفظ</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+        <div class="modal fade " id="editTrainingWorkMod" tabindex="-1" role="dialog" aria-labelledby="addTrainingWorkMod" >
+                                <div class="modal-dialog modDialogEditName" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header modHead">
+                                    <h5 class="modal-title titleModPort" id="exampleModalLabel">تعديل الخبرات العملية</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body" style="padding-right: 28px; padding-left: 28px;">
+                                        <div class="divtxtsAddWork">
+                                            <p class="pAddWorksPort">مكان العمل </p>
+                                       <input
+                    v-model="employment.workplace"
+                    type="text"
+                    placeholder="مثلا مكتب العدالة للأعمال القانونية"
+                    class="txtUserNameSettings"
+                 />
+                                        </div>
+                                        <div class="divtxtsAddWork">
+                                            <p class="pAddWorksPort">وصف العمل </p>
+                                            <textarea class="txtUserNameSettings  "   v-model="employment.description" cols="30" rows="5">                                                معيد في قسم القانون الدولي
+                                            </textarea>
+                                        </div>
+                                        <div class="row ">
+                                          <div class="col-lg-6">
+                                              <p class="pAddWorksPort text-start">من</p>
+                                               <input
+                          v-model="employment.from" 
+                          type="date"
+                          class="js-example-placeholder-single js-states form-control rowDateofBirth DateDay" />
+                                          </div>
+                                          <div class="col-lg-6">
+                                              <p class="pAddWorksPort text-start">إلى</p>
+                                              <input    v-model="employment.to"  type="date"   class="js-example-placeholder-single js-states form-control rowDateofBirth DateDay" />
+
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer footmodEditName">
+                                            <button class="btnBackSettings btnBackSettingsModName" data-dismiss="modal">إلغاء</button>
+                                            <button class="btnNextSettings btnNextSettingsModName" @click.prevent="updateEmployeee" >حفظ</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
     <!-- add job data modal -->
     <div
       class="modal fade show"
@@ -1034,9 +1207,9 @@
             <!-- <div class="contentScroll contentScrolmodEditBio"> -->
             <multiselect
               :multiple="true"
-              v-model="exp_data.skill_id"
+              v-model="exp_data"
               :options="skills"
-              track-by="id"
+              track-by="name"
               :hideSelected="true"
               label="name"
               :group-select="true"
@@ -1062,7 +1235,7 @@
             <button
               class="btnNextSettings btnNextSettingsModName"
               data-dismiss="modal"
-              @click="saveExperience(exp_data.id)"
+              @click="saveExperience()"
             >
               حفظ
             </button>
@@ -1126,7 +1299,7 @@
                   <button
                     class="backSkills"
                     v-for="(skill, i) in work.skills"
-                    :key="i"
+                    :key="skill.id"
                   >
                     <p>{{ skill.name }}</p>
                   </button>
@@ -1408,8 +1581,8 @@
                     class="js-example-placeholder-single js-states form-control rowDateofBirth"
                     v-model="language_data.language"
                   >
-                    <template v-for="(lang, i) in languages">
-                      <option :key="i" :value="i">
+                    <template v-for="(lang, i) in languages"  :index="i">
+                      <option  :value="i">
                         {{ lang }}
                       </option>
                     </template>
@@ -1782,6 +1955,8 @@ export default {
       guest: false,
       underway_requests: [],
       complete_requests: [],
+        errors: [],
+      userjobs: this.$store.state.user.jobs,
       my_works: [],
       job_data: {},
       language_data: {},
@@ -1804,9 +1979,58 @@ export default {
       exp_data: {},
       skills: [],
       work: {},
+      showtext: '81px',
+        employment: {
+          workplace:'',
+          description: '',
+          from:'',
+          to:''
+        },
+         update_data: {},
+        options:
+        {
+    skill_id: [
+    ],
+    work_nature_id: [
+        {
+            id: 1
+        }
+    ],
+    speciality_id: 1
+}
     };
   },
+
   methods: {
+
+          updateEmployeee() {
+        const emp= this.employment;
+      this.$http
+        .post("lawyer/auth/lawyer/update-employe",emp )
+        .then(() => {
+          this.$notify({
+            group: "foo",
+            type: "success",
+            text: "تم التحديث بنجاح",
+          });
+          this.updateState();
+        })
+        .catch(() => {
+          this.$notify({
+            group: "foo",
+            type: "error",
+            text: "حدث خطأ ما...يرجي مراجعة البيانات",
+          });
+        });
+    },
+
+    async updateState() {
+      const userInfo = await this.$http.get(
+        "lawyer/auth/lawyer/lawyer-profile"
+      );
+      await this.$store.commit("setUser", userInfo.data.data);
+     
+    },
     getUnderwayReq() {
       this.$http
         .get("lawyer/auth/lawyer/my-Request?status=underway")
@@ -1825,7 +2049,7 @@ export default {
     },
     getGallary(pageNumber) {
       this.$http
-        .get(`lawyer/auth/lawyer/all-gallery?page=${pageNumber}&per_page=3`)
+        .get(`https://dashboard.ecp-bash.com/lawyer/auth/lawyer/galleries?title=&skill_id=&deration=&per_page=3`)
         .then((res) => {
           this.paginate = res.data.data.paginate;
           this.my_works = res.data.data.Gallery;
@@ -1919,21 +2143,50 @@ export default {
       this.language_data = this.$store.state.user.language[index];
       this.language_data.language = this.$store.state.user.language[index].name;
     },
-    saveExperience(id) {
-      const objToPost = JSON.parse(JSON.stringify(this.exp_data));
+        deleteWork(id) {
+      // Use sweetalert2
+      this.$swal({
+  title: 'هل انت متأكد من عملية الحذف',
+  text: "تريد ان تحذف هذا العمل",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'نعم احذف'
+}).then((result) => {
+  if (result.isConfirmed) {
+    const idd = id
+    this.deleteItem(idd);
+  }
+});
+    },
+    deleteItem(id){
+         this.$http.delete(`https://dashboard.ecp-bash.com/lawyer/auth/lawyer/galleries/${id}`).then(res => {
+           console.log(res);
+        });
+        this.getGallary();
+    }
+    ,
+    saveExperience() {
+       for (const item of this.exp_data) {
+          
+       
+            this.options.skill_id.push({
+              "id":  item.id
+            })
+        
+            } 
 
-      objToPost.speciality_id = objToPost.Speciality_id;
-      objToPost.skill_id = [{}];
-
-      if (id) {
         this.$http
-          .post("lawyer/auth/lawyer/update-experience", this.exp_data)
-          .then(() => {
+          .post("https://dashboard.ecp-bash.com/lawyer/auth/lawyer/update-experience", this.options)
+          .then((res) => {
+            console.log('adf '+res.data)
             this.$notify({
               group: "foo",
               type: "success",
               text: "تم تحديث  المهارات بنجاح",
             });
+             this.updateState();
           })
           .catch((err) => {
             this.$notify({
@@ -1942,24 +2195,7 @@ export default {
               text: "حدث خطأ ما...يرجي مراجعة البيانات",
             });
           });
-      } else {
-        this.$http
-          .post("lawyer/auth/lawyer/update-experience", this.exp_data)
-          .then(() => {
-            this.$notify({
-              group: "foo",
-              type: "success",
-              text: "تم إضافة  المهارة بنجاح",
-            });
-          })
-          .catch((err) => {
-            this.$notify({
-              group: "foo",
-              type: "error",
-              text: "حدث خطأ ما...يرجي مراجعة البيانات",
-            });
-          });
-      }
+      
     },
     editExp(skill) {
       this.exp_data = skill;

@@ -24,7 +24,7 @@
         <div
           v-if="type == 'user'"
           id="navbarSupportedContent"
-          class="collapse navbar-collapse navCollapse"
+          class="collapse navbar-collapse navCollapse"  
         >
           <ul class="navbar-nav mr-auto containerCollapes">
             <li class="nav-item active ordersLink">
@@ -472,7 +472,7 @@
                 type == 'user'
                   ? '/client-profile'
                   : type == 'lawyer'
-                  ? '/lawyerHome'
+                  ? '/office-profile'
                   : '/office-profile'
               "
             >
@@ -731,7 +731,7 @@ export default {
   },
   computed: {
     personalImageLink() {
-      return this.type == "user" ? "/client-profile" : "/office-home";
+      return this.type == "user" ? "/client-profile" : "/officeHome";
     },
   },
   created() {

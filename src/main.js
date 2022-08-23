@@ -12,16 +12,36 @@ import "@/assets/bootstrap/js/bootstrap.min.js";
 import "@/assets/css/media.css";
 import "@/assets/css/all.css";
 import "@/assets/css/style.css";
+
 // import "@fortawesome/fontawesome-free/css/all.css";
 
 import VueTelInput from "vue-tel-input";
 
 // saleh
+var filter = function(text, length, clamp){
+  clamp = clamp || '...';
+  var node = document.createElement('div');
+  node.innerHTML = text;
+  var content = node.textContent;
+  return content.length > length ? content.slice(0, length) + clamp : content;
+};
+
+Vue.filter('truncate', filter);
 
 Vue.use(VueTelInput);
 
 import "vue-multiselect/dist/vue-multiselect.min.css";
 import "vue-tel-input/dist/vue-tel-input.css";
+
+import VueSweetalert2 from 'vue-sweetalert2';
+Vue.use(VueSweetalert2);
+
+// If you don't need the styles, do not connect
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+
+import "@/assets/style.scss";
+
 import Multiselect from "vue-multiselect";
 
 import Notifications from "vue-notification";

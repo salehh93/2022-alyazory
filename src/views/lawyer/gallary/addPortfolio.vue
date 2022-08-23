@@ -2,9 +2,9 @@
   <!-- Start Content -->
   <div class="container">
     <div class="pagesLinks">
-      <a href="index.html">الرئيسية/</a>
-      <a href="Portfolio.html">معرض أعمالي/</a>
-      <a href="AddPortfolio.html">إضافة عمل جديد</a>
+      <router-link class=" text-info" to="/lawyerHome">الرئيسية</router-link> /
+      <router-link  class=" text-info"  to="/lawyerPortfolio" >معرض أعمالي</router-link> / 
+      <span>إضافة عمل جديد</span>
     </div>
     
     <div class="row">
@@ -432,6 +432,7 @@ this.$notify({
           type: "success",
           text: res.data.message,
         });
+        this.$router.push("/lawyerPortfolio");
         }
         if (res.response.status === 400) {
          console.log('data res: '+res.response.data.message);
@@ -463,16 +464,6 @@ this.$notify({
   },
 };
 </script>
-<style>
-.multiselect {
-  text-align: right;
-}
-.multiselect__option--highlight, .multiselect__tag{
-  background-color: #f2f2f2;
-  color: #000; 
-}
+<style  lang="scss">
 
-.multiselect__option--highlight::after {
-  display: none !important;
-}
 </style>

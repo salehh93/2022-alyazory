@@ -141,6 +141,13 @@ const routes = [
     component: () => import("../views/lawyer/gallary/addPortfolio.vue"),
   },
   {
+    path: "/editPort/:id",
+    name: "edit-port",
+    component: () => import("../views/lawyer/gallary/TheEditPortfolio.vue"),
+  },
+
+
+  {
     path: "/lawyerOffers",
     name: "lawyer-offers",
     component: () => import("../views/lawyer/offers/offers.vue"),
